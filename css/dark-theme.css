@@ -1,14 +1,14 @@
 /* =====================================================
-   DARK MODE + GREEN ACCENT THEME — UG.IKEDI Portfolio
+   DARK MODE + GREEN ACCENT THEME — Kengalia Technologies
    Override file — loaded after style.css
-   Green: #22c55e  |  Dark bg: #0a0a0a
+   Brand green: #2e9d63  |  Dark bg: #0a0a0a
 ===================================================== */
 
 /* ---- VARIABLES ---- */
 :root {
-  --green:          #22c55e;
-  --green-dim:      rgba(34, 197, 94, 0.12);
-  --green-border:   rgba(34, 197, 94, 0.35);
+  --green:          #2e9d63;
+  --green-dim:      rgba(46, 157, 99, 0.12);
+  --green-border:   rgba(46, 157, 99, 0.40);
   --dark-bg:        #0a0a0a;
   --dark-surface:   #111111;
   --dark-card:      #161616;
@@ -124,6 +124,52 @@ hr {
 }
 .logo:hover {
   color: #fff !important;
+}
+
+/* ---- KENGALIA TECHNOLOGIES WORDMARK (from design handoff) ----
+   KENGALIA in Cormorant Garamond serif w/ wide tracking + L/I ligature,
+   Technologies in Quicksand below, brand green #2e9d63. Scaled for the navbar. */
+.logo-keng {
+  display: inline-flex !important;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  letter-spacing: 0 !important;
+  padding: 0;
+  text-decoration: none !important;
+}
+.logo-keng .keng {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 5px;
+  text-indent: 5px;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #2e9d63;
+  -webkit-text-stroke: 0.3px #2e9d63;
+  transition: color 0.25s ease;
+}
+.logo-keng .keng .li {
+  margin-left: -0.40em;
+  letter-spacing: 0;
+}
+.logo-keng .tech {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  margin-top: -2px;
+  color: #2e9d63;
+  transition: color 0.25s ease;
+}
+.logo-keng:hover .keng,
+.logo-keng:hover .tech {
+  color: #ffffff;
+}
+.logo-keng:hover .keng {
+  -webkit-text-stroke-color: #ffffff;
 }
 
 /* ---- SECTIONS ---- */
