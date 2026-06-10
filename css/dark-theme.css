@@ -1,0 +1,418 @@
+/* =====================================================
+   DARK MODE + GREEN ACCENT THEME — UG.IKEDI Portfolio
+   Override file — loaded after style.css
+   Green: #22c55e  |  Dark bg: #0a0a0a
+===================================================== */
+
+/* ---- VARIABLES ---- */
+:root {
+  --green:          #22c55e;
+  --green-dim:      rgba(34, 197, 94, 0.12);
+  --green-border:   rgba(34, 197, 94, 0.35);
+  --dark-bg:        #0a0a0a;
+  --dark-surface:   #111111;
+  --dark-card:      #161616;
+  --dark-elevated:  #1c1c1c;
+  --border:         rgba(255, 255, 255, 0.07);
+  --text-body:      #c9d1d9;
+  --text-muted:     #6b7280;
+  --text-heading:   #ffffff;
+}
+
+/* ---- BASE ---- */
+body {
+  background-color: var(--dark-bg) !important;
+  color: var(--text-body) !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: var(--text-heading) !important;
+}
+
+p {
+  color: var(--text-body);
+}
+
+.lead {
+  color: #adb5bd !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+a {
+  color: var(--green);
+}
+a:hover {
+  color: #fff;
+}
+
+hr {
+  background-color: var(--border);
+  opacity: 1;
+}
+
+/* ---- HERO IMAGE FIX (absolute position override) ---- */
+.img-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+}
+.img-bg img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+  -ms-transform: none !important;
+}
+
+/* Darker hero overlay */
+.hero.overlay:before,
+.bg-image.overlay:before {
+  background-color: rgba(0, 0, 0, 0.72) !important;
+}
+
+/* About page banner — show the whole image, fitted & centred (no crop), lighter overlay */
+.hero-about .img-bg img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+.hero-about .img-bg {
+  background-color: #0a0a0a;
+}
+.hero-about.overlay:before {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ---- NAVIGATION ---- */
+/* Fixed header: pinned to top, transparent over hero, solid dark bar on scroll */
+.site-nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+.site-nav.nav-scrolled {
+  background-color: rgba(10, 10, 10, 0.95) !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 30px rgba(0, 0, 0, 0.45);
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+.site-nav .site-navigation .site-menu > li > a {
+  background-color: transparent !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+.site-nav .site-navigation .site-menu > li > a:hover {
+  color: var(--green) !important;
+}
+.site-nav .site-navigation .site-menu > li.active > a {
+  color: var(--green) !important;
+}
+
+.logo {
+  color: var(--green) !important;
+  letter-spacing: 3px;
+}
+.logo:hover {
+  color: #fff !important;
+}
+
+/* ---- SECTIONS ---- */
+.section {
+  background-color: var(--dark-bg) !important;
+}
+
+.section.bg-light,
+.bg-light {
+  background-color: var(--dark-surface) !important;
+}
+
+/* Section dividers — green tint */
+.border-bottom {
+  border-bottom-color: var(--border) !important;
+}
+
+/* ---- SUBHEADING & MORE ---- */
+.subheading {
+  color: var(--green) !important;
+}
+
+.more {
+  color: var(--text-body);
+}
+.more:before {
+  background-color: var(--border);
+}
+.more:after {
+  background-color: var(--green);
+}
+.more:hover {
+  color: var(--green);
+}
+
+/* ---- BUTTONS ---- */
+.btn.btn-black {
+  background-color: var(--green) !important;
+  color: #000 !important;
+  border-color: var(--green) !important;
+  font-weight: 600;
+}
+.btn.btn-black:hover {
+  background-color: transparent !important;
+  color: var(--green) !important;
+  border-color: var(--green) !important;
+}
+
+.btn.btn-primary-outline {
+  border-color: var(--green) !important;
+  color: var(--green) !important;
+}
+.btn.btn-primary-outline.white {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  color: #fff !important;
+}
+.btn.btn-primary-outline.white:hover {
+  background-color: var(--green) !important;
+  border-color: var(--green) !important;
+  color: #000 !important;
+}
+.btn.btn-primary-outline:hover {
+  background-color: var(--green) !important;
+  color: #000 !important;
+}
+
+/* ---- FORM INPUTS ---- */
+.form-control {
+  background-color: var(--dark-card) !important;
+  border-color: var(--border) !important;
+  color: var(--text-heading) !important;
+}
+.form-control::placeholder {
+  color: var(--text-muted) !important;
+}
+.form-control:focus {
+  background-color: var(--dark-card) !important;
+  border-color: var(--green-border) !important;
+  color: var(--text-heading) !important;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.08) !important;
+}
+
+/* ---- SERVICE CARDS (services.html Partner/Engage/Elevate) ---- */
+.service .service-inner {
+  background-color: var(--dark-card) !important;
+}
+.service .service-inner h3,
+.service .service-inner .h3 {
+  color: var(--text-heading) !important;
+}
+.service .service-inner p {
+  color: var(--text-muted) !important;
+}
+.service:hover {
+  box-shadow: 0 15px 30px 0 rgba(34, 197, 94, 0.08) !important;
+}
+
+/* ---- UNIT-4 SERVICE ICONS ---- */
+.unit-4 .unit-4-icon span {
+  color: var(--green) !important;
+}
+.unit-4 h3, .unit-4 .h3 {
+  color: var(--text-heading) !important;
+}
+.unit-4 p {
+  color: var(--text-body) !important;
+}
+
+/* ---- INLINE CARD BOXES (IT / Consulting cards in index.html) ---- */
+.rounded[style*="background:#f8f9fa"],
+.rounded[style*="background: #f8f9fa"] {
+  background: var(--dark-card) !important;
+  border-color: var(--border) !important;
+}
+
+/* ---- RESUME (about.html) ---- */
+.resume .resume-item {
+  border-left-color: var(--green) !important;
+}
+.resume .resume-item::before {
+  background: var(--dark-bg) !important;
+  border-color: var(--green) !important;
+}
+.resume .resume-item h5 {
+  background-color: var(--dark-card);
+  color: var(--text-muted);
+}
+
+/* ---- PARTNER LOGOS SECTION ---- */
+.partner-logo-grayscale {
+  filter: brightness(0.6) !important;
+}
+
+/* ---- FOOTER ---- */
+.site-footer {
+  background-color: #060606 !important;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+.site-footer a {
+  color: #555 !important;
+}
+.site-footer a:hover {
+  color: var(--green) !important;
+}
+.site-footer .widget h3,
+.site-footer .widget .h3 {
+  color: var(--green) !important;
+  letter-spacing: 2px;
+}
+.site-footer p {
+  color: #444 !important;
+}
+.site-footer .social li a {
+  background: var(--dark-elevated) !important;
+  color: #666;
+}
+.site-footer .social li a:hover {
+  background: var(--green) !important;
+  color: #000 !important;
+}
+
+/* ---- MOBILE MENU ---- */
+.site-mobile-menu {
+  background: #0d0d0d !important;
+}
+.site-mobile-menu .site-nav-wrap a {
+  color: var(--text-body) !important;
+}
+.site-mobile-menu .site-nav-wrap a:hover {
+  color: var(--green) !important;
+}
+.site-mobile-menu .site-nav-wrap li.active > a {
+  color: var(--green) !important;
+}
+.site-mobile-menu .site-nav-wrap .arrow-collapse {
+  border-color: var(--border) !important;
+}
+.site-mobile-menu-close > span:before,
+.site-mobile-menu-close > span:after {
+  background: var(--text-muted) !important;
+}
+
+/* ---- BURGER ICON ---- */
+.burger span,
+.burger span:before,
+.burger span:after {
+  background: #fff !important;
+}
+
+/* ---- PRELOADER ---- */
+#overlayer {
+  background: var(--dark-bg) !important;
+}
+
+/* ---- BOOTSTRAP CARD / ALERT OVERRIDES ---- */
+.card {
+  background-color: var(--dark-card) !important;
+  border-color: var(--border) !important;
+  color: var(--text-body) !important;
+}
+
+/* ---- SHADOW OVERRIDE — subtle green glow ---- */
+.shadow-sm {
+  box-shadow: 0 1px 8px rgba(34, 197, 94, 0.06) !important;
+}
+
+/* ---- HEADINGS — green left accent line on h2 in sections ---- */
+.section h2,
+.section .h2 {
+  position: relative;
+}
+.section h2.mb-0:after,
+.section h2.mb-2:after,
+.section h2.mb-3:after,
+.section h2.mb-4:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: var(--green);
+  margin-top: 12px;
+}
+
+/* ---- ABOUT PAGE — resume h5 badge ---- */
+.resume .resume-item h5 {
+  color: var(--green) !important;
+  background: var(--green-dim) !important;
+  border: 1px solid var(--green-border);
+}
+
+/* ---- IMG CARDS — thumbnail borders on portfolio ---- */
+.portfolio-thumb,
+a.glightbox img,
+.col-6 a.glightbox img {
+  border: 1px solid var(--border);
+  transition: border-color 0.3s ease;
+}
+a.glightbox:hover img {
+  border-color: var(--green-border);
+}
+
+/* ---- LINKS in contact list ---- */
+.links li a {
+  color: var(--text-body) !important;
+}
+.links li a:hover {
+  color: var(--green) !important;
+}
+
+/* ---- FEATHER ICONS inline ---- */
+[class^="feather-"],
+[class*=" feather-"] {
+  color: var(--green) !important;
+}
+
+/* ---- ADDRESS / small text ---- */
+address {
+  color: var(--text-muted) !important;
+}
+
+small,
+.small {
+  color: var(--text-muted) !important;
+}
+
+/* ---- SCROLLBAR ---- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dark-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green);
+}
+
+/* ---- SELECTION ---- */
+::selection {
+  background: var(--green-dim);
+  color: var(--green);
+}
+
+/* ---- SPINNER (preloader) ---- */
+.spinner-border {
+  color: var(--green) !important;
+}
