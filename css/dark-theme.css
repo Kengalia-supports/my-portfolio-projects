@@ -172,6 +172,21 @@ hr {
   -webkit-text-stroke-color: #ffffff;
 }
 
+/* ---- KENGTEC SHORTMARK (Pacifico) — navbar + favicon companion ---- */
+.logo-kengtec {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: 26px;
+  color: #2e9d63;
+  text-decoration: none !important;
+  line-height: 1;
+  letter-spacing: 0;
+  transition: color 0.25s ease;
+}
+.logo-kengtec:hover {
+  color: #ffffff;
+}
+
 /* ---- SECTIONS ---- */
 .section {
   background-color: var(--dark-bg) !important;
