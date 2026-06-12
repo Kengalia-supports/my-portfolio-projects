@@ -172,6 +172,28 @@ hr {
   -webkit-text-stroke-color: #ffffff;
 }
 
+/* ---- NAV DROPDOWN — dark theme ---- */
+.site-menu .dropdown-menu {
+  background-color: #141414;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-top: 2px solid #2e9d63;
+  border-radius: 6px;
+  padding: 6px 0;
+  min-width: 220px;
+  margin-top: 4px !important;
+}
+.site-menu .dropdown-item {
+  color: rgba(255,255,255,0.6);
+  font-size: .85rem;
+  padding: 7px 18px;
+  transition: color 0.2s, background 0.2s;
+}
+.site-menu .dropdown-item:hover,
+.site-menu .dropdown-item:focus {
+  background-color: rgba(46,157,99,0.1);
+  color: #2e9d63;
+}
+
 /* ---- KENGTEC SHORTMARK (Pacifico) — navbar + favicon companion ---- */
 .logo-kengtec {
   font-family: 'Pacifico', cursive;

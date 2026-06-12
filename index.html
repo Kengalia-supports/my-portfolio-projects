@@ -42,11 +42,23 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="index.html" class="logo logo-kengtec m-0" aria-label="Kengalia Technologies">kengtec</a>
+				<a href="index.html" class="logo logo-keng m-0" aria-label="Kengalia"><span class="keng">KENGAL<span class="li">I</span>A</span></a>
 				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
 					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="services.html">Services</a></li>
+					<li class="dropdown">
+						<a href="services.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Technologies</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="services.html">Web Design &amp; Development</a></li>
+							<li><a class="dropdown-item" href="services.html">Visual Branding &amp; Design</a></li>
+							<li><a class="dropdown-item" href="services.html">IT Support &amp; Maintenance</a></li>
+							<li><a class="dropdown-item" href="services.html">Consulting &amp; Training</a></li>
+							<li><a class="dropdown-item" href="services.html">Data Analysis</a></li>
+							<li><a class="dropdown-item" href="services.html">Digital Marketing</a></li>
+						</ul>
+					</li>
 					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="#" style="opacity:.45;" title="Coming soon">Art</a></li>
+					<li><a href="#" style="opacity:.45;" title="Coming soon">Attire</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
 				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
@@ -65,12 +77,12 @@
 			<div class="row align-items-center v-h-full">
 				<div class="col-lg-8 col-xxl-7">
 					<h1 class="heading-2 text-white mb-1" data-aos="fade-up">Kengalia</h1>
-					<p class="text-white mb-2" style="font-size:.85rem; letter-spacing:3px; text-transform:uppercase; opacity:.55;" data-aos="fade-up" data-aos-delay="50">Technologies &nbsp;·&nbsp; Art &nbsp;·&nbsp; Attire &nbsp;·&nbsp; Platform</p>
-					<p class="text-white lead mb-2" data-aos="fade-up" data-aos-delay="100">Building African business, forward.</p>
-					<p class="text-white mb-4" style="opacity:.8; font-size:1rem;" data-aos="fade-up" data-aos-delay="150">Websites &nbsp;·&nbsp; Systems &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Consulting &nbsp;·&nbsp; Attire &nbsp;·&nbsp; Art</p>
+					<p class="text-white mb-2" style="font-size:.85rem; letter-spacing:3px; text-transform:uppercase; opacity:.55;" data-aos="fade-up" data-aos-delay="50">Technologies &nbsp;·&nbsp; Art &nbsp;·&nbsp; Attire &nbsp;·&nbsp; Marketplace</p>
+					<p class="text-white lead mb-2" data-aos="fade-up" data-aos-delay="100">Bringing Africa to the world.</p>
+					<p class="text-white mb-4" style="opacity:.8; font-size:1rem;" data-aos="fade-up" data-aos-delay="150">Digital &nbsp;·&nbsp; Creative &nbsp;·&nbsp; Commerce &nbsp;·&nbsp; Style &nbsp;·&nbsp; Art</p>
 					<p data-aos="fade-up" class="d-flex gap-3" data-aos-delay="200">
-						<a href="#services" class="btn btn-primary-outline white">What We Do</a>
 						<a href="#ecosystem" class="btn btn-primary-outline white">Our Companies</a>
+						<a href="#contact" class="btn btn-primary-outline white">Work With Us</a>
 					</p>
 				</div>
 			</div>
@@ -82,112 +94,41 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-8 text-center" data-aos="fade-up">
-					<p class="lead mb-3">Kengalia is a multi-company ecosystem building the digital, creative, and commercial future of African business. Founded and led by Uzodinma Godspower Ikedi.</p>
-					<p class="text-muted mb-1"><strong>Kengalia Technologies</strong> is the build-and-support arm — handling websites, systems, branding, consulting, and data for businesses worldwide.</p>
-					<p class="text-muted">Based in Nigeria &nbsp;·&nbsp; Working with clients globally</p>
+					<p class="lead mb-3">Africa has always had something to say. Kengalia is the company that helps it say it — to the world. We build the technology, create the art, wear the attire, and open the marketplace that puts African business, culture, and craft on a global stage.</p>
+					<p class="text-muted">Founded and led by Uzodinma Godspower Ikedi &nbsp;·&nbsp; Nigeria &nbsp;·&nbsp; Working globally</p>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- SERVICES WITH USE CASES -->
-	<div class="section bg-light" id="services">
-		<div class="container">
-
-			<div class="row mb-5">
-				<div class="col-lg-6" data-aos="fade-up">
-					<span class="subheading d-inline-block mb-2">What We Do</span>
-					<h2 class="mb-0">Services</h2>
-				</div>
-				<div class="col-lg-6 d-flex align-items-end justify-content-lg-end mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-					<a href="services.html" class="more">Full service details &rarr;</a>
-				</div>
-			</div>
-
-			<!-- Service 1: Web Design -->
-			<div class="row align-items-center mb-5 pb-5 border-bottom" data-aos="fade-up">
-				<div class="col-lg-7 pe-lg-5">
-					<span class="subheading d-inline-block mb-2">01</span>
-					<h3 class="mb-3">Web Design &amp; Development</h3>
-					<p>From domain and hosting setup to a fully responsive, SEO-ready website — we handle the full build. Every site is aligned to your business goals, designed for your audience, and built to grow with you.</p>
-					<p class="text-muted small mb-0"><strong>Live work:</strong> Designed and built <a href="https://www.uba-global.com/index.html" target="_blank">UBA Global</a> and <a href="https://divinegraceadulthome.com/index.html" target="_blank">Divine Grace Adult Home</a> — full responsive business websites. <a href="portfolio.html">See the portfolio &rarr;</a></p>
-				</div>
-				<div class="col-lg-5 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-					<a href="images/globaluba.jpg" class="glightbox d-block" data-gallery="services">
-						<img src="images/globaluba.jpg" alt="Website design example" class="img-fluid rounded shadow-sm">
-					</a>
-				</div>
-			</div>
-
-			<!-- Service 2: Visual Branding -->
-			<div class="row align-items-center mb-5 pb-5 border-bottom" data-aos="fade-up">
-				<div class="col-lg-5 order-lg-1 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-					<a href="images/grapimg.png" class="glightbox d-block" data-gallery="services">
-						<img src="images/grapimg.png" alt="Visual branding example" class="img-fluid rounded shadow-sm">
-					</a>
-				</div>
-				<div class="col-lg-7 order-lg-2 ps-lg-5">
-					<span class="subheading d-inline-block mb-2">02</span>
-					<h3 class="mb-3">Visual Branding &amp; Graphic Design</h3>
-					<p>Logo creation, brand identity systems, marketing materials, and social media assets — all tailored to communicate your message clearly. Consistent across every platform, built to leave a lasting impression.</p>
-					<p class="text-muted small mb-0"><strong>Work example:</strong> Delivered a full visual identity suite including custom graphics and branded digital assets for a client's online presence.</p>
-				</div>
-			</div>
-
-			<!-- Service 3: IT Support -->
-			<div class="row align-items-center mb-5 pb-5 border-bottom" data-aos="fade-up">
-				<div class="col-lg-7 pe-lg-5">
-					<span class="subheading d-inline-block mb-2">03</span>
-					<h3 class="mb-3">System Support &amp; IT</h3>
-					<p>Routine maintenance, troubleshooting, software updates, hardware repairs, network support, and performance checks across platforms and devices. Keeps your business running without interruption.</p>
-					<p class="text-muted small mb-0"><strong>Experience:</strong> Provided information systems support at May &amp; Baker Nigeria Plc and multiple organisations across Lagos and Abuja — maintaining systems, resolving incidents, and training staff.</p>
-				</div>
-				<div class="col-lg-5 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-					<div class="rounded p-4 text-center" style="background:#141414; border:1px solid rgba(255,255,255,0.07);">
-						<span class="feather-cpu d-block mb-3" style="font-size:3rem; color:#aaa;"></span>
-						<p class="text-muted small mb-0">Hardware · Software · Networks<br>Navision · JIRA · ServiceNow</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- Service 4: Consulting & Training -->
-			<div class="row align-items-center" data-aos="fade-up">
-				<div class="col-lg-5 order-lg-1 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-					<div class="rounded p-4 text-center" style="background:#141414; border:1px solid rgba(255,255,255,0.07);">
-						<span class="feather-users d-block mb-3" style="font-size:3rem; color:#aaa;"></span>
-						<p class="text-muted small mb-0">Digital Strategy · Process Improvement<br>Technology Adoption · Staff Training</p>
-					</div>
-				</div>
-				<div class="col-lg-7 order-lg-2 ps-lg-5">
-					<span class="subheading d-inline-block mb-2">04</span>
-					<h3 class="mb-3">Consulting &amp; Training</h3>
-					<p>Expert guidance to help businesses navigate digital transformation, optimise systems, and build internal capability. Strategic planning, hands-on training, and practical technology adoption — tailored to your team's level and goals.</p>
-					<p class="text-muted small mb-0"><strong>Experience:</strong> Provided consulting and systems specialist work at Kengalia Concept (Abuja) — advising on information systems, workflows, and digital operations.</p>
-				</div>
-			</div>
-
-		</div>
-	</div>
 
 	<!-- KENGALIA ECOSYSTEM -->
 	<div class="section" id="ecosystem">
 		<div class="container">
 			<div class="row mb-5" data-aos="fade-up">
 				<div class="col-lg-8">
-					<span class="subheading d-inline-block mb-2">The Ecosystem</span>
-					<h2 class="mb-2">Kengalia Companies</h2>
-					<p class="text-muted mb-0">One ecosystem, multiple arms — each serving a different dimension of business and life.</p>
+					<span class="subheading d-inline-block mb-2">What We Do</span>
+					<h2 class="mb-2">The Kengalia Companies</h2>
+					<p class="text-muted mb-0">Africa has culture, craft, commerce, and capability. Each Kengalia company brings a different dimension of that to the world.</p>
 				</div>
 			</div>
 			<div class="row g-4">
 
-				<!-- Kengalia Technologies -->
-				<div class="col-sm-6 col-lg-4" data-aos="fade-up">
+				<!-- Kengalia Technologies — featured, wider -->
+				<div class="col-sm-6 col-lg-5" data-aos="fade-up">
 					<div class="h-100 rounded p-4" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:2px solid #2e9d63;">
 						<span class="feather-cpu mb-3 d-block" style="font-size:1.8rem; color:#2e9d63;"></span>
 						<h5 class="text-white mb-1">Kengalia Technologies</h5>
-						<p class="text-muted small mb-3">Web, systems, branding, consulting &amp; data — the digital build-and-support arm.</p>
-						<a href="#services" class="btn btn-sm btn-black">Explore &rarr;</a>
+						<p class="text-muted small mb-3">The digital build-and-support arm — websites, systems, branding, consulting &amp; data.</p>
+						<ul class="list-unstyled mb-3" style="columns:2; font-size:.8rem; color:rgba(255,255,255,0.45);">
+							<li class="mb-1">› Web Design</li>
+							<li class="mb-1">› IT Support</li>
+							<li class="mb-1">› Visual Branding</li>
+							<li class="mb-1">› Consulting</li>
+							<li class="mb-1">› Digital Marketing</li>
+							<li class="mb-1">› Data Analysis</li>
+						</ul>
+						<a href="services.html" class="btn btn-sm btn-black">All Services &rarr;</a>
 					</div>
 				</div>
 
@@ -196,17 +137,17 @@
 					<div class="h-100 rounded p-4" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:2px solid #2e9d63;">
 						<span class="feather-trending-up mb-3 d-block" style="font-size:1.8rem; color:#2e9d63;"></span>
 						<h5 class="text-white mb-1">Perfcent</h5>
-						<p class="text-muted small mb-3">Business performance SaaS — tools and dashboards for data-driven decision making.</p>
+						<p class="text-muted small mb-3">Business performance SaaS — tools and dashboards that turn your data into decisions.</p>
 						<a href="https://perfcent.com" target="_blank" class="btn btn-sm btn-black">Visit &rarr;</a>
 					</div>
 				</div>
 
-				<!-- Kengalia Platform -->
-				<div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+				<!-- Kengalia Marketplace -->
+				<div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
 					<div class="h-100 rounded p-4" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:1px solid rgba(255,255,255,0.1);">
 						<span class="feather-shopping-bag mb-3 d-block" style="font-size:1.8rem; color:rgba(255,255,255,0.25);"></span>
-						<h5 class="text-white mb-1">Kengalia Platform</h5>
-						<p class="text-muted small mb-3">Marketplace &amp; ecommerce ecosystem — connecting African businesses with the world.</p>
+						<h5 class="text-white mb-1">Kengalia Marketplace</h5>
+						<p class="text-muted small mb-3">An African marketplace — buy, sell, trade. Built to give African products the global reach they deserve.</p>
 						<span class="badge" style="background:rgba(46,157,99,0.15); color:#2e9d63; font-size:.7rem; letter-spacing:1px;">Coming Soon</span>
 					</div>
 				</div>
@@ -216,7 +157,7 @@
 					<div class="h-100 rounded p-4" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:1px solid rgba(255,255,255,0.1);">
 						<span class="feather-image mb-3 d-block" style="font-size:1.8rem; color:rgba(255,255,255,0.25);"></span>
 						<h5 class="text-white mb-1">Kengalia Art</h5>
-						<p class="text-muted small mb-3">Visual art, graphic pieces, and creative works — a dedicated space for art beyond client work.</p>
+						<p class="text-muted small mb-3">African visual art and creative works — a gallery bringing African artistic expression to a global audience.</p>
 						<span class="badge" style="background:rgba(46,157,99,0.15); color:#2e9d63; font-size:.7rem; letter-spacing:1px;">Coming Soon</span>
 					</div>
 				</div>
@@ -226,7 +167,7 @@
 					<div class="h-100 rounded p-4" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:1px solid rgba(255,255,255,0.1);">
 						<span class="feather-scissors mb-3 d-block" style="font-size:1.8rem; color:rgba(255,255,255,0.25);"></span>
 						<h5 class="text-white mb-1">Kengalia Attire</h5>
-						<p class="text-muted small mb-3">Premium African attire — distinctive, considered design rooted in identity and craft.</p>
+						<p class="text-muted small mb-3">Premium African attire — distinctive design rooted in identity, crafted for the world.</p>
 						<span class="badge" style="background:rgba(46,157,99,0.15); color:#2e9d63; font-size:.7rem; letter-spacing:1px;">Coming Soon</span>
 					</div>
 				</div>
@@ -318,7 +259,7 @@
 			</div>
 			<div class="row mt-5">
 				<div class="col-12 text-center">
-					<p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kengalia Technologies &mdash; A Kengalia Concept company.<span class="d-block mt-1" style="font-size:.8rem; opacity:.55;">Template by <a href="https://untree.co">Untree.co</a></span></p>
+					<p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kengalia &mdash; A Kengalia Concept company.<span class="d-block mt-1" style="font-size:.8rem; opacity:.55;">Template by <a href="https://untree.co">Untree.co</a></span></p>
 				</div>
 			</div>
 		</div>
