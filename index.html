@@ -16,7 +16,7 @@
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Quicksand:wght@600&family=Pacifico&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Quicksand:wght@600&family=Pacifico&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
 	<link rel="stylesheet" href="fonts/feather/style.css">
@@ -28,7 +28,7 @@
 
 	<title>Kengalia — Web, Systems &amp; Business Support</title>
 </head>
-<body>
+<body class="kengalia-home">
 
 	<div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
@@ -42,12 +42,14 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="index.html" class="logo logo-keng m-0" aria-label="Kengalia"><span class="keng">KENGAL<span class="li">I</span>A</span></a>
+				<a href="index.html" class="logo logo-kengalia m-0" aria-label="Kengalia">Kengalia</a>
 				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
 					<li class="active"><a href="index.html">Home</a></li>
 					<li class="dropdown">
-						<a href="services.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Technologies</a>
+						<a href="technologies.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Technologies</a>
 						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="technologies.html">Technologies Home</a></li>
+							<li><hr class="dropdown-divider" style="border-color:rgba(255,255,255,0.08);"></li>
 							<li><a class="dropdown-item" href="services.html">Web Design &amp; Development</a></li>
 							<li><a class="dropdown-item" href="services.html">Visual Branding &amp; Design</a></li>
 							<li><a class="dropdown-item" href="services.html">IT Support &amp; Maintenance</a></li>
@@ -68,19 +70,18 @@
 		</div>
 	</nav>
 
-	<!-- HERO — fixed image alignment, text is the star -->
-	<div class="hero v-h-full overlay">
-		<div class="img-bg">
-			<img src="images/banner.png" alt="Banner" style="width:100%; height:100%; object-fit:cover; object-position:center top;">
-		</div>
-		<div class="container">
-			<div class="row align-items-center v-h-full">
-				<div class="col-lg-8 col-xxl-7">
-					<h1 class="heading-2 text-white mb-1" data-aos="fade-up">Kengalia</h1>
-					<p class="text-white mb-2" style="font-size:.85rem; letter-spacing:3px; text-transform:uppercase; opacity:.55;" data-aos="fade-up" data-aos-delay="50">Technologies &nbsp;·&nbsp; Art &nbsp;·&nbsp; Attire &nbsp;·&nbsp; Marketplace</p>
-					<p class="text-white lead mb-2" data-aos="fade-up" data-aos-delay="100">Bringing Africa to the world.</p>
-					<p class="text-white mb-4" style="opacity:.8; font-size:1rem;" data-aos="fade-up" data-aos-delay="150">Digital &nbsp;·&nbsp; Creative &nbsp;·&nbsp; Commerce &nbsp;·&nbsp; Style &nbsp;·&nbsp; Art</p>
-					<p data-aos="fade-up" class="d-flex gap-3" data-aos-delay="200">
+	<!-- HERO — clean dark, no image (future: slideshow per division) -->
+	<div style="min-height:100vh; display:flex; align-items:center; background:#0a0a0a; position:relative; overflow:hidden;">
+		<!-- subtle radial glow -->
+		<div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:700px; height:700px; background:radial-gradient(ellipse at center, rgba(46,157,99,0.07) 0%, transparent 70%); pointer-events:none;"></div>
+		<div class="container" style="position:relative; z-index:2;">
+			<div class="row justify-content-center text-center">
+				<div class="col-lg-9 col-xxl-8">
+					<p class="mb-3" style="font-size:.75rem; letter-spacing:4px; text-transform:uppercase; color:rgba(46,157,99,0.6);" data-aos="fade-up">Nigeria &nbsp;·&nbsp; The World</p>
+					<h1 style="font-family:'Dancing Script',cursive; font-weight:700; font-size:clamp(3.5rem,9vw,7.5rem); color:#2e9d63; line-height:1.05; margin-bottom:.5rem;" data-aos="fade-up" data-aos-delay="50">Kengalia</h1>
+					<p class="text-white mb-2" style="font-size:.8rem; letter-spacing:3px; text-transform:uppercase; opacity:.4;" data-aos="fade-up" data-aos-delay="100">Technologies &nbsp;·&nbsp; Art &nbsp;·&nbsp; Attire &nbsp;·&nbsp; Marketplace</p>
+					<p class="lead text-white mt-4 mb-5" style="opacity:.75; max-width:560px; margin-inline:auto;" data-aos="fade-up" data-aos-delay="150">Bringing Africa to the world.</p>
+					<p data-aos="fade-up" class="d-flex gap-3 justify-content-center" data-aos-delay="200">
 						<a href="#ecosystem" class="btn btn-primary-outline white">Our Companies</a>
 						<a href="#contact" class="btn btn-primary-outline white">Work With Us</a>
 					</p>

@@ -1,12 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <defs>
-    <style><![CDATA[
-      @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-    ]]></style>
-  </defs>
-  <text x="16" y="25"
-        text-anchor="middle"
-        font-family="Pacifico, cursive"
-        font-size="24"
-        fill="#2e9d63">k</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 110 170">
+  <!-- Kengalia circuit icon mark, brand green, transparent background -->
+  <g stroke="#2e9d63" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <line x1="60" y1="17" x2="60" y2="148"/>
+    <polyline points="60,36 90,36 90,16"/>
+    <line x1="60" y1="63" x2="18" y2="63"/>
+    <polyline points="60,96 88,96 88,131"/>
+  </g>
+  <rect x="56.3" y="32.3" width="7.5" height="7.5" rx="0.5" transform="rotate(45 60 36)" fill="#2e9d63"/>
+  <rect x="56.3" y="59.3" width="7.5" height="7.5" rx="0.5" transform="rotate(45 60 63)" fill="#2e9d63"/>
+  <rect x="56.3" y="92.3" width="7.5" height="7.5" rx="0.5" transform="rotate(45 60 96)" fill="#2e9d63"/>
+  <circle cx="60" cy="8" r="9" fill="#2e9d63"/><circle cx="60" cy="8" r="3.8" fill="#0a0a0a"/>
+  <polygon points="97.4,11.1 93.1,15.4 86.9,15.4 82.6,11.1 82.6,4.9 86.9,0.6 93.1,0.6 97.4,4.9" fill="#2e9d63"/>
+  <rect x="87.5" y="5.5" width="5" height="5" fill="#0a0a0a"/>
+  <circle cx="10" cy="63" r="8" fill="#2e9d63"/><circle cx="10" cy="63" r="3.2" fill="#0a0a0a"/>
+  <circle cx="88" cy="140" r="9" fill="#2e9d63"/><circle cx="88" cy="140" r="3.8" fill="#0a0a0a"/>
+  <rect x="54.5" y="149.5" width="11" height="11" transform="rotate(45 60 155)" fill="#2e9d63"/>
+  <circle cx="60" cy="155" r="3" fill="#0a0a0a"/>
+  <polygon points="68.3,83.4 63.4,88.3 56.6,88.3 51.7,83.4 51.7,76.6 56.6,71.7 63.4,71.7 68.3,76.6" fill="#2e9d63"/>
+  <rect x="57.5" y="77.5" width="5" height="5" fill="#0a0a0a"/>
 </svg>

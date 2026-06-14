@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <defs></defs>
+  <rect width="600" height="300" fill="#ffffff"></rect>
+  <text x="296" y="192" text-anchor="middle" font-family="Dancing Script,cursive" font-weight="700" font-size="136" fill="#9dc5bc">Kengalia</text>
+  <line x1="316" y1="216" x2="448" y2="216" stroke="#aacbc6" stroke-width="1.2"></line>
+  <text x="450" y="234" text-anchor="end" font-family="Raleway,sans-serif" font-size="21" font-weight="300" fill="#7aadaa" letter-spacing="5">concepts</text>
+</svg>

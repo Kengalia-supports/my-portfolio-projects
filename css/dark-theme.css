@@ -76,6 +76,11 @@ hr {
   background-color: rgba(0, 0, 0, 0.72) !important;
 }
 
+/* Technologies division hero — extra-heavy overlay so banner.png doesn't blind text */
+.hero-tech-overlay.overlay:before {
+  background-color: rgba(0,0,0,0.82) !important;
+}
+
 /* About page banner — show the whole image, fitted & centred (no crop), lighter overlay */
 .hero-about .img-bg img {
   object-fit: contain !important;
@@ -172,6 +177,31 @@ hr {
   -webkit-text-stroke-color: #ffffff;
 }
 
+/* ---- KENGALIA PARENT BRAND LOGO — Dancing Script cursive ---- */
+.logo-kengalia {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 30px;
+  color: #2e9d63;
+  text-decoration: none !important;
+  line-height: 1;
+  letter-spacing: 0;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.7);
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+.logo-kengalia:hover {
+  color: #ffffff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.5);
+}
+
+/* ---- KENGALIA HOME NAV — always dark, prominent shadow ---- */
+body.kengalia-home .site-nav {
+  background-color: rgba(10,10,10,0.92) !important;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.6), 0 1px 0 rgba(46,157,99,0.12) !important;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
 /* ---- NAV DROPDOWN — dark theme ---- */
 .site-menu .dropdown-menu {
   background-color: #141414;
@@ -194,11 +224,11 @@ hr {
   color: #2e9d63;
 }
 
-/* ---- KENGTEC SHORTMARK (Pacifico) — navbar + favicon companion ---- */
+/* ---- KENGTEC SHORTMARK (Dancing Script) — navbar + favicon companion ---- */
 .logo-kengtec {
-  font-family: 'Pacifico', cursive;
-  font-weight: 400;
-  font-size: 26px;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 28px;
   color: #2e9d63;
   text-decoration: none !important;
   line-height: 1;
