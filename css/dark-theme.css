@@ -239,6 +239,14 @@ body.kengalia-home .site-nav {
   backdrop-filter: blur(12px);
 }
 
+/* ---- KENGTEC PAGES NAV — always dark so logo stays visible over hero ---- */
+body.kengtec-page .site-nav {
+  background-color: rgba(8,8,8,0.95) !important;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.7), 0 1px 0 rgba(46,157,99,0.10) !important;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
 /* ---- NAV DROPDOWN — hover reveal, click navigates ---- */
 /* Show on hover (no JS toggle needed since the link navigates on click) */
 .site-menu li.dropdown:hover > .dropdown-menu {
