@@ -275,20 +275,51 @@ body.kengtec-page .site-nav {
   color: #2e9d63;
 }
 
-/* ---- KENGTEC SHORTMARK (Dancing Script) — navbar + favicon companion ---- */
+/* ---- KENGTEC LOGO — mirrors Kengalia concepts layout ---- */
 .logo-kengtec {
+  display: inline-flex !important;
+  flex-direction: column;
+  align-items: flex-end;
+  text-decoration: none !important;
+  line-height: 1;
+  gap: 0;
+}
+.logo-kengtec-main {
   font-family: 'Dancing Script', cursive;
   font-weight: 700;
   font-size: 28px;
   color: #2e9d63;
-  text-decoration: none !important;
   line-height: 1;
-  letter-spacing: 0;
+  transition: color 0.25s ease;
+  align-self: flex-start;
+}
+.logo-kengtec-sub {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 2px;
+}
+.logo-kengtec-line {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: rgba(157, 197, 188, 0.40);
+  flex-shrink: 0;
+  transition: background 0.25s ease;
+}
+.logo-kengtec-label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 8px;
+  letter-spacing: 3.5px;
+  text-transform: lowercase;
+  color: rgba(157, 197, 188, 0.55);
+  line-height: 1;
   transition: color 0.25s ease;
 }
-.logo-kengtec:hover {
-  color: #ffffff;
-}
+.logo-kengtec:hover .logo-kengtec-main { color: #ffffff; }
+.logo-kengtec:hover .logo-kengtec-line { background: rgba(157,197,188,0.7); }
+.logo-kengtec:hover .logo-kengtec-label { color: rgba(157,197,188,0.85); }
 
 /* ---- SECTIONS ---- */
 .section {
