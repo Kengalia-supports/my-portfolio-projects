@@ -267,9 +267,9 @@ body.kengtec-page .site-nav {
   color: #2e9d63 !important;
 }
 
-/* ---- NAV DROPDOWN — hover reveal, click navigates ---- */
-/* Show on hover (no JS toggle needed since the link navigates on click) */
-.site-menu li.dropdown:hover > .dropdown-menu {
+/* ---- NAV DROPDOWN — hover to show; JS pins it open until click outside ---- */
+.site-menu li.dropdown:hover > .dropdown-menu,
+.site-menu li.dropdown.dropdown-open > .dropdown-menu {
   display: block;
 }
 
@@ -620,3 +620,213 @@ small,
 .spinner-border {
   color: var(--green) !important;
 }
+
+/* ---- PARTNER LOGOS — uniform height, no visible box ---- */
+.partner-logo-box {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2px;
+}
+.partner-logo-box > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.partner-logo-box img {
+  max-height: 56px;
+  width: auto;
+  max-width: 85%;
+  display: block;
+}
+/* Light-bg partner logos — invert to suit dark theme */
+.partner-invert img {
+  filter: invert(1) grayscale(1) !important;
+}
+.partner-invert:hover img {
+  filter: invert(1) grayscale(0%) !important;
+}
+
+/* ---- RESPONSIVE TWO-COLUMN LIST ---- */
+.list-2col {
+  columns: 2;
+  column-gap: 1rem;
+}
+@media (max-width: 575px) {
+  .list-2col { columns: 1 !important; }
+}
+
+/* ---- MOBILE NAV — Kengalia green pill in hamburger menu ---- */
+.site-mobile-menu .nav-kengalia-link {
+  font-family: 'Dancing Script', cursive !important;
+  font-weight: 700 !important;
+  font-size: 22px !important;
+  color: #fff !important;
+  background-color: #2e9d63 !important;
+  padding: 4px 16px !important;
+  border-radius: 4px !important;
+  line-height: 1.4 !important;
+  display: inline-block !important;
+}
+.site-mobile-menu .nav-kengalia-link:hover {
+  background-color: #fff !important;
+  color: #2e9d63 !important;
+}
+
+/* ---- MOBILE — general responsive fixes ---- */
+@media (max-width: 767px) {
+  /* Reduce hero padding on very small screens */
+  .site-nav + * { padding-top: 0; }
+  /* Perfcent wordmark — scale down on mobile */
+  .perfcent-wordmark { font-size: 2.2rem !important; }
+}
+@media (max-width: 575px) {
+  /* Stack CTA buttons vertically on very small phones */
+  .btn-cta-row { flex-direction: column; align-items: center; }
+}
+
+/* ============================================================
+   ART GALLERY SYSTEM
+   ============================================================ */
+
+.art-protected { -webkit-user-drag: none; user-select: none; }
+
+/* Background-image container -- replaces img for download protection */
+.art-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 3/4;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+.art-img.sq  { aspect-ratio: 1/1; }
+.art-img.p45 { aspect-ratio: 4/5; }
+.art-img.ls  { aspect-ratio: 4/3; }
+
+/* Subtle watermark on every piece */
+.art-img::after {
+    content: 'Kengalia Art';
+    position: absolute;
+    bottom: 6px;
+    right: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.15);
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+/* Hero slideshow */
+.art-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: #0a0a0a;
+    padding-bottom: 90px;
+}
+.art-slider-wrap { position: absolute; inset: 0; }
+.art-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: artFade 30s infinite;
+}
+.art-slide.s1 { animation-delay: 0s; }
+.art-slide.s2 { animation-delay: 6s; }
+.art-slide.s3 { animation-delay: 12s; }
+.art-slide.s4 { animation-delay: 18s; }
+.art-slide.s5 { animation-delay: 24s; }
+@keyframes artFade {
+    0%, 17% { opacity: 1; }
+    22%, 100% { opacity: 0; }
+}
+.art-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+        rgba(10,10,10,0.15) 0%,
+        rgba(10,10,10,0.55) 50%,
+        rgba(10,10,10,0.95) 100%);
+    z-index: 1;
+}
+.art-hero-content { position: relative; z-index: 2; }
+
+/* Art typography */
+.art-tag {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: .72rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #2e9d63;
+    margin-bottom: .75rem;
+    display: block;
+}
+.art-h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+    letter-spacing: -2px;
+}
+.art-h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+.art-lead { color: rgba(255,255,255,0.45); font-size: .95rem; line-height: 1.9; margin-bottom: 1.5rem; }
+.art-link { color: #2e9d63; font-size: .88rem; letter-spacing: 1px; text-decoration: none; }
+.art-link:hover { color: #fff; }
+
+/* Masonry gallery grid */
+.art-masonry { columns: 4 175px; column-gap: 6px; }
+.art-card { break-inside: avoid; margin-bottom: 6px; cursor: default; }
+@media (max-width: 991px) { .art-masonry { columns: 3; } }
+@media (max-width: 575px)  { .art-masonry { columns: 2; } }
+
+/* Freestyle horizontal decoration strip */
+.art-strip {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 2px;
+}
+.art-strip::-webkit-scrollbar { display: none; }
+.art-strip-item {
+    flex: 0 0 auto;
+    width: 140px;
+    height: 185px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 3px;
+}
+@media (max-width: 575px) { .art-strip-item { width: 110px; height: 145px; } }
+
+/* Back link (gallery sub-pages) */
+.art-back {
+    color: rgba(255,255,255,0.35);
+    font-size: .78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+}
+.art-back:hover { color: #2e9d63; }

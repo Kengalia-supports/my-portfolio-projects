@@ -10,7 +10,7 @@
 	});
 
 
-	var rellax = new Rellax('.rellax');
+	if (document.querySelector('.rellax')) { var rellax = new Rellax('.rellax'); }
 
 	var preloader = function() {
 
@@ -174,6 +174,31 @@
 		});
 	};
 	whatsappDirect();
+
+
+	var navDropdown = function() {
+		// Show on hover, stay open until click/focus elsewhere
+		document.querySelectorAll('.site-menu li.dropdown').forEach(function(li) {
+			li.addEventListener('mouseenter', function() {
+				this.classList.add('dropdown-open');
+			});
+		});
+		document.addEventListener('click', function(e) {
+			if (!e.target.closest('.site-menu li.dropdown')) {
+				document.querySelectorAll('.site-menu li.dropdown').forEach(function(d) {
+					d.classList.remove('dropdown-open');
+				});
+			}
+		});
+		document.addEventListener('focusin', function(e) {
+			if (!e.target.closest('.site-menu li.dropdown')) {
+				document.querySelectorAll('.site-menu li.dropdown').forEach(function(d) {
+					d.classList.remove('dropdown-open');
+				});
+			}
+		});
+	};
+	navDropdown();
 
 
 })()
