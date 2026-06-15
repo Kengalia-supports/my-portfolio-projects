@@ -296,16 +296,7 @@ body.kengtec-page .site-nav {
 .logo-kengtec-sub {
   display: flex;
   align-items: center;
-  gap: 7px;
   margin-top: 2px;
-}
-.logo-kengtec-line {
-  display: block;
-  width: 24px;
-  height: 1px;
-  background: rgba(157, 197, 188, 0.40);
-  flex-shrink: 0;
-  transition: background 0.25s ease;
 }
 .logo-kengtec-label {
   font-family: 'Raleway', sans-serif;
@@ -318,7 +309,6 @@ body.kengtec-page .site-nav {
   transition: color 0.25s ease;
 }
 .logo-kengtec:hover .logo-kengtec-main { color: #ffffff; }
-.logo-kengtec:hover .logo-kengtec-line { background: rgba(157,197,188,0.7); }
 .logo-kengtec:hover .logo-kengtec-label { color: rgba(157,197,188,0.85); }
 
 /* ---- SECTIONS ---- */
