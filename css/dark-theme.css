@@ -247,6 +247,26 @@ body.kengtec-page .site-nav {
   backdrop-filter: blur(12px);
 }
 
+/* ---- NAV KENGALIA LINK — Dancing Script, green pill, clearly distinct ---- */
+.site-menu .nav-kengalia-link,
+.site-menu li a.nav-kengalia-link {
+  font-family: 'Dancing Script', cursive !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  color: #fff !important;
+  background-color: #2e9d63 !important;
+  padding: 4px 14px !important;
+  border-radius: 4px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+  transition: background-color 0.25s ease, color 0.25s ease !important;
+}
+.site-menu .nav-kengalia-link:hover,
+.site-menu li a.nav-kengalia-link:hover {
+  background-color: #fff !important;
+  color: #2e9d63 !important;
+}
+
 /* ---- NAV DROPDOWN — hover reveal, click navigates ---- */
 /* Show on hover (no JS toggle needed since the link navigates on click) */
 .site-menu li.dropdown:hover > .dropdown-menu {
@@ -279,7 +299,7 @@ body.kengtec-page .site-nav {
 .logo-kengtec {
   display: inline-flex !important;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   text-decoration: none !important;
   line-height: 1;
   gap: 0;
@@ -291,7 +311,6 @@ body.kengtec-page .site-nav {
   color: #2e9d63;
   line-height: 1;
   transition: color 0.25s ease;
-  align-self: flex-start;
 }
 .logo-kengtec-sub {
   display: flex;
