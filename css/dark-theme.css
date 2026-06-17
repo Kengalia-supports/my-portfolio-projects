@@ -692,7 +692,16 @@ small,
    ART GALLERY SYSTEM
    ============================================================ */
 
-.art-protected { -webkit-user-drag: none; user-select: none; }
+.art-protected {
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none; /* blocks iOS long-press "Save Image" */
+}
 
 /* Background-image container -- replaces img for download protection */
 .art-img {

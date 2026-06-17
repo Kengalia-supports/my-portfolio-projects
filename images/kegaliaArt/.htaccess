@@ -1,0 +1,14 @@
+# Hotlink protection for Kengalia Art files.
+# Only requests originating from kengalia.com pages may load these images.
+# Direct address-bar access, hotlinking from other sites, and image-search
+# crawlers are denied (empty/foreign referer = 403). This is the real lock —
+# the JS/CSS blocks on the page only stop casual right-click/drag.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?kengalia\.com [NC]
+  RewriteCond %{HTTP_REFERER} !^$ [NC]
+  RewriteRule \.(webp|png|jpe?g|gif)$ - [F,NC]
+</IfModule>
+
+# Stop directory listing of the art folders.
+Options -Indexes
