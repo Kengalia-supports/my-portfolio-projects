@@ -1,0 +1,54 @@
+KENGALIA.COM — TASK / HANDOFF LOG
+Updated: 2026-06-17
+
+================================================================
+DONE
+================================================================
+- Full dark-theme site on Medio template (Bootstrap 5).
+- Homepage, About, Founder bio, Portfolio (Perfcent + UBA Global).
+- Technologies overview + 6 service pages.
+- Kengalia Art hub + Night Eye gallery (50 pieces).
+- Attire + Marketplace holding pages.
+- 404 page + ErrorDocument in .htaccess.
+- SEO: OG tags, canonical, JSON-LD, sitemap.xml, robots.txt on all pages.
+- Division links on homepage fixed (were broken by curly quotes).
+- Dead social icons / template demo debris removed.
+- Encoding fixed sitewide.
+- Art images optimized to WebP: 166 MB -> 25 MB (-85%). All refs updated.
+- Art download protection: server-side hotlink lock (kegaliaArt/.htaccess)
+  + CSS/JS blocks (no right-click, no drag, no iOS long-press save).
+
+================================================================
+WAITING ON CLIENT
+================================================================
+- CONTACT FORM: index.html form still posts to action="#" (does nothing).
+  Create a free account at formspree.io, make a form, send me the form ID
+  (looks like https://formspree.io/f/xxxxxxx) and I'll wire it in.
+  Until then the contact form does not send mail.
+- FOUNDER PHOTO: images/godspower.jpg is missing — about.html and
+  about-godspower.html show a placeholder. Drop the file in (named exactly
+  godspower.jpg); layout is already in place.
+- Confirm hosting supports .htaccess / mod_rewrite (standard cPanel/Apache
+  /LiteSpeed do). The hotlink protection and 404 depend on it.
+
+================================================================
+NEXT TIME / FUTURE
+================================================================
+- Attire + Marketplace: build real pages when ready (use art-night-eye.html
+  pattern: WebP, lazy-load, hotlink-protected folder).
+- Second art album: create art-<name>.html from the Night Eye pattern and
+  add a card on art.html.
+- Consider optimizing the remaining non-art images (grapimg.png 4.8 MB,
+  banner.png 1.3 MB, hero-27.png 1.2 MB) to WebP for an extra speed win.
+
+================================================================
+DEPLOY NOTES
+================================================================
+- Deploy model: manual upload (cPanel) — extract kengalia-site.zip into
+  public_html. Files sit at the ZIP root, no wrapper folder.
+- .htaccess files ARE included (root + images/kegaliaArt/). Make sure the
+  host shows hidden files so you can confirm they uploaded.
+- Domain: kengalia.com. Canonicals/sitemap already use https://kengalia.com.
+- NOT in the upload zip (intentionally): .git, CLAUDE.md, README.txt,
+  LICENSE.txt, .vscode, tasks.txt — these are dev/repo files, not webroot.
+- WhatsApp contact in copy: +2347026550798
