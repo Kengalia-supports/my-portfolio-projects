@@ -99,11 +99,44 @@ DONE
   - Agentic-readiness: added llms.txt (services + pricing + divisions +
     notes for AI agents). robots.txt already allows all crawlers by
     default (no change needed).
-  - Remaining, smaller: ~84KB of unused CSS still flagged (down from
-    ~350KB) and bootstrap.bundle.min.js (79KB) + glightbox.min.js (53KB)
-    are vendor bundles loaded whole even though only a fraction of each is
-    used — a further win is possible but diminishing-returns territory for
-    the risk/effort versus what's already shipped.
+  - Found bootstrap.bundle.min.js (79KB) was 100% dead weight sitewide —
+    zero data-bs-* attributes in any HTML, zero references to the
+    `bootstrap` JS object in any script, and the one thing that could have
+    used its Collapse component (navbar.js's mobile nested-dropdown
+    conversion) never fires because no page has a .has-children nav item.
+    Same finding for tiny-slider.js/css and rellax.min.js (no #testimonial
+    or .rellax element exists anywhere) and glightbox.min.js/css on every
+    page except portfolio.html (the only one with .glightbox elements).
+    Removed all of it. Mobile Lighthouse: 74 -> 77.
+  - Converted the heaviest images to WebP (grapimg.png 4.86MB -> 519KB,
+    hero-27.png 1.13MB -> 153KB, 4 portfolio excel screenshots, 4 Perfcent
+    screenshots) — ~6.7MB -> ~1.1MB. Spot-checked text-heavy screenshots
+    for compression artifacts before committing; none visible at quality 82.
+  - Final state: Performance 73/94 (mobile/desktop, index.html — mobile
+    dropped from 77 after adding the new hero banner image below, a
+    deliberate tradeoff), Accessibility 100/100, Best Practices 100/100,
+    SEO 100/100.
+  - Remaining, smaller: ~84KB of unused CSS still flagged. A further win
+    is possible (more aggressive PurgeCSS safelisting) but diminishing-
+    returns territory for the risk/effort versus what's already shipped.
+
+- POST-LAUNCH FIXES, ROUND 2 (2026-06-18):
+  - Mobile menu scroll-jump: the burger is `<a href="#">` and navbar.js's
+    click handler never called e.preventDefault(), so opening the mobile
+    menu also triggered the browser's default "jump to top" behavior for
+    href="#" on top of the JS toggle. One-line fix.
+  - Added a back-to-top button (fixed bottom-right, fades in after 400px
+    of scroll, smooth-scrolls to top on click, hidden while the mobile
+    menu is open) so users still have a fast way to return to the top
+    without it firing automatically on every menu open.
+  - New hero banner image on index.html (the main Kengalia page) — client
+    supplied a wide image with owls top and bottom and a black gap between;
+    cropped it down to just the top owl row (cut at a verified pure-black
+    pixel row so no artwork was clipped), used as the hero background with
+    background-size:100% auto so it scales by width only and the page's
+    own #0a0a0a background extends seamlessly below it instead of
+    stretching the art to fill the viewport. Added a preload hint since
+    it's the page's LCP element.
 
 ================================================================
 WAITING ON CLIENT
