@@ -15,7 +15,7 @@
   --dark-elevated:  #1c1c1c;
   --border:         rgba(255, 255, 255, 0.07);
   --text-body:      #c9d1d9;
-  --text-muted:     #6b7280;
+  --text-muted:     #828b96; /* was #6b7280 — failed WCAG AA (~4.1:1) on #0a0a0a; this clears 4.5:1 */
   --text-heading:   #ffffff;
 }
 
@@ -217,7 +217,7 @@ hr {
   font-size: 9px;
   letter-spacing: 3.5px;
   text-transform: lowercase;
-  color: rgba(157, 197, 188, 0.55);
+  color: rgba(157, 197, 188, 0.72); /* was 0.55 — failed WCAG AA on #0a0a0a (3.79:1), this clears 4.5:1 */
   line-height: 1;
   transition: color 0.25s ease;
 }
@@ -323,7 +323,7 @@ body.kengtec-page .site-nav {
   font-size: 8px;
   letter-spacing: 2px;
   text-transform: lowercase;
-  color: rgba(157, 197, 188, 0.55);
+  color: rgba(157, 197, 188, 0.72); /* was 0.55 — failed WCAG AA on #0a0a0a (3.79:1), this clears 4.5:1 */
   line-height: 1;
   transition: color 0.25s ease;
 }
@@ -468,7 +468,7 @@ body.kengtec-page .site-nav {
   border-top: 1px solid var(--border);
 }
 .site-footer a {
-  color: #555 !important;
+  color: #8a93a0 !important; /* was #555 — failed WCAG AA on #060606 footer bg, this clears 4.5:1 */
 }
 .site-footer a:hover {
   color: var(--green) !important;
@@ -479,7 +479,7 @@ body.kengtec-page .site-nav {
   letter-spacing: 2px;
 }
 .site-footer p {
-  color: #444 !important;
+  color: #828b96 !important; /* was #444 — failed WCAG AA on #060606 footer bg, this clears 4.5:1 */
 }
 .site-footer .social li a {
   background: var(--dark-elevated) !important;

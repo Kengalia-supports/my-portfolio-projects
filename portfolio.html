@@ -25,11 +25,18 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="fonts/icomoon/style.css">
-	<link rel="stylesheet" href="fonts/feather/style.css">
-	<link rel="stylesheet" href="css/tiny-slider.css">
-	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="css/glightbox.min.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="fonts/feather/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/tiny-slider.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/aos.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/glightbox.min.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="fonts/icomoon/style.css">
+		<link rel="stylesheet" href="fonts/feather/style.css">
+		<link rel="stylesheet" href="css/tiny-slider.css">
+		<link rel="stylesheet" href="css/aos.css">
+		<link rel="stylesheet" href="css/glightbox.min.css">
+	</noscript>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/dark-theme.css">
 	<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=IBM+Plex+Mono:wght@600&display=swap" rel="stylesheet">
@@ -62,7 +69,7 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="index.html" class="logo logo-kengalia m-0" aria-label="Kengalia">
+				<a href="index.html" class="logo logo-kengalia m-0">
 					<span class="logo-kengalia-main">Kengalia</span>
 					<span class="logo-kengalia-sub"><span class="logo-kengalia-line"></span><span class="logo-kengalia-concepts">concepts</span></span>
 				</a>
@@ -84,12 +91,14 @@
 					<li><a href="marketplace.html">Marketplace</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
-				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" aria-label="Open menu" data-toggle="collapse" data-target="#main-navbar">
 					<span></span>
 				</a>
 			</div>
 		</div>
 	</nav>
+
+	<main>
 
 	<!-- HERO &mdash; fixed banner -->
 	<div class="hero v-h-full overlay">
@@ -303,6 +312,8 @@
 	</div>
 
 	<!-- FOOTER -->
+	</main>
+
 	<div class="site-footer">
 		<div class="container">
 			<div class="row">
@@ -335,17 +346,17 @@
 							<li><a href="about.html">About Us</a></li>
 						</ul>
 						<ul class="list-unstyled social">
-							<li><a href="https://www.instagram.com/uzodinma_godspower/" target="_blank"><span class="icon-instagram"></span></a></li>
-							<li><a href="https://x.com/_Animalitic" target="_blank"><span class="icon-twitter"></span></a></li>
-							<li><a href="https://www.linkedin.com/in/godspower-uzodinma-71252018a/" target="_blank"><span class="icon-linkedin"></span></a></li>
-							<li><a href="https://github.com/godxpowerx" target="_blank"><span class="icon-github"></span></a></li>
+							<li><a href="https://www.instagram.com/uzodinma_godspower/" target="_blank" aria-label="Instagram"><span class="icon-instagram"></span></a></li>
+							<li><a href="https://x.com/_Animalitic" target="_blank" aria-label="Twitter / X"><span class="icon-twitter"></span></a></li>
+							<li><a href="https://www.linkedin.com/in/godspower-uzodinma-71252018a/" target="_blank" aria-label="LinkedIn"><span class="icon-linkedin"></span></a></li>
+							<li><a href="https://github.com/godxpowerx" target="_blank" aria-label="GitHub"><span class="icon-github"></span></a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="row mt-5">
 				<div class="col-12 text-center">
-					<p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kengalia Technologies, a Kengalia Concept company.<span class="d-block mt-1" style="font-size:.8rem; opacity:.55;">Template by <a href="https://untree.co">Untree.co</a></span></p>
+					<p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kengalia Technologies, a Kengalia Concept company.<span class="d-block mt-1" style="font-size:.8rem;">Template by <a href="https://untree.co">Untree.co</a></span></p>
 				</div>
 			</div>
 		</div>

@@ -43,11 +43,18 @@
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Quicksand:wght@600;700&family=Pacifico&family=Dancing+Script:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="fonts/icomoon/style.css">
-	<link rel="stylesheet" href="fonts/feather/style.css">
-	<link rel="stylesheet" href="css/tiny-slider.css">
-	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="css/glightbox.min.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="fonts/feather/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/tiny-slider.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/aos.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/glightbox.min.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="fonts/icomoon/style.css">
+		<link rel="stylesheet" href="fonts/feather/style.css">
+		<link rel="stylesheet" href="css/tiny-slider.css">
+		<link rel="stylesheet" href="css/aos.css">
+		<link rel="stylesheet" href="css/glightbox.min.css">
+	</noscript>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/dark-theme.css">
 
@@ -67,7 +74,7 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="technologies.html" class="logo logo-kengtec m-0" aria-label="Kengalia Technologies">
+				<a href="technologies.html" class="logo logo-kengtec m-0">
 					<span class="logo-kengtec-main">Kengtec</span>
 					<span class="logo-kengtec-sub"><span class="logo-kengtec-label">kengalia technologies</span></span>
 				</a>
@@ -87,14 +94,17 @@
 					<li><a href="portfolio.html">Portfolio</a></li>
 					<li><a href="art.html">Art</a></li>
 					<li><a href="attire.html">Attire</a></li>
+					<li><a href="marketplace.html">Marketplace</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
-				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" aria-label="Open menu" data-toggle="collapse" data-target="#main-navbar">
 					<span></span>
 				</a>
 			</div>
 		</div>
 	</nav>
+
+	<main>
 
 	<!-- HERO &mdash; banner with heavy dark overlay -->
 	<div class="hero v-h-full overlay hero-tech-overlay">
@@ -206,7 +216,7 @@
 							<span class="feather-briefcase" style="font-size:1.6rem; color:#2e9d63;"></span>
 							<span class="badge" style="background:rgba(46,157,99,0.15); color:#2e9d63; font-size:.75rem; font-weight:500;">From &#8358;75,000</span>
 						</div>
-						<h5 class="text-white mb-2"><a href="service-web.html" class="text-white text-decoration-none">Web Design &amp; Development</a></h5>
+						<h3 class="h5 text-white mb-2"><a href="service-web.html" class="text-white text-decoration-none">Web Design &amp; Development</a></h3>
 						<p class="text-muted small mb-3">End-to-end websites that look professional, load fast, and get found on Google. SEO built in from day one.</p>
 						<ul class="list-unstyled small mb-4" style="color:rgba(255,255,255,0.4);">
 							<li class="mb-1">&rsaquo; Business &amp; portfolio websites</li>
@@ -226,7 +236,7 @@
 							<span class="feather-feather" style="font-size:1.6rem; color:#2e9d63;"></span>
 							<span class="badge" style="background:rgba(46,157,99,0.15); color:#2e9d63; font-size:.75rem; font-weight:500;">From &#8358;30,000</span>
 						</div>
-						<h5 class="text-white mb-2"><a href="service-branding.html" class="text-white text-decoration-none">Visual Branding &amp; Design</a></h5>
+						<h3 class="h5 text-white mb-2"><a href="service-branding.html" class="text-white text-decoration-none">Visual Branding &amp; Design</a></h3>
 						<p class="text-muted small mb-3">A consistent visual identity (logo, colours, fonts) that makes your business recognisable across every platform.</p>
 						<ul class="list-unstyled small mb-4" style="color:rgba(255,255,255,0.4);">
 							<li class="mb-1">&rsaquo; Logo &amp; brand identity</li>
@@ -246,7 +256,7 @@
 							<span class="feather-trending-up" style="font-size:1.6rem; color:#2e9d63;"></span>
 							<span class="badge" style="background:rgba(46,157,99,0.15); color:#2e9d63; font-size:.75rem; font-weight:500;">From &#8358;40,000/mo</span>
 						</div>
-						<h5 class="text-white mb-2"><a href="service-marketing.html" class="text-white text-decoration-none">Digital Marketing</a></h5>
+						<h3 class="h5 text-white mb-2"><a href="service-marketing.html" class="text-white text-decoration-none">Digital Marketing</a></h3>
 						<p class="text-muted small mb-3">Data-driven campaigns that bring the right audience to your business and keep them coming back.</p>
 						<ul class="list-unstyled small mb-4" style="color:rgba(255,255,255,0.4);">
 							<li class="mb-1">&rsaquo; Social media management</li>
@@ -266,7 +276,7 @@
 							<span class="feather-cpu" style="font-size:1.6rem; color:#2e9d63;"></span>
 							<span class="badge" style="background:rgba(46,157,99,0.15); color:#2e9d63; font-size:.75rem; font-weight:500;">From &#8358;20,000/mo</span>
 						</div>
-						<h5 class="text-white mb-2"><a href="service-it.html" class="text-white text-decoration-none">IT Support &amp; Maintenance</a></h5>
+						<h3 class="h5 text-white mb-2"><a href="service-it.html" class="text-white text-decoration-none">IT Support &amp; Maintenance</a></h3>
 						<p class="text-muted small mb-3">We keep your hardware, software, and networks running. On call when something breaks, proactive so less breaks.</p>
 						<ul class="list-unstyled small mb-4" style="color:rgba(255,255,255,0.4);">
 							<li class="mb-1">&rsaquo; Computer &amp; laptop repairs</li>
@@ -286,7 +296,7 @@
 							<span class="feather-users" style="font-size:1.6rem; color:#2e9d63;"></span>
 							<span class="badge" style="background:rgba(46,157,99,0.15); color:#2e9d63; font-size:.75rem; font-weight:500;">From &#8358;40,000</span>
 						</div>
-						<h5 class="text-white mb-2"><a href="service-consulting.html" class="text-white text-decoration-none">Consulting &amp; Training</a></h5>
+						<h3 class="h5 text-white mb-2"><a href="service-consulting.html" class="text-white text-decoration-none">Consulting &amp; Training</a></h3>
 						<p class="text-muted small mb-3">Choose the right tools, fix the workflows behind them, and train your team to run it all with confidence.</p>
 						<ul class="list-unstyled small mb-4" style="color:rgba(255,255,255,0.4);">
 							<li class="mb-1">&rsaquo; Digital strategy &amp; planning</li>
@@ -306,7 +316,7 @@
 							<span class="feather-bar-chart-2" style="font-size:1.6rem; color:#2e9d63;"></span>
 							<span class="badge" style="background:rgba(46,157,99,0.15); color:#2e9d63; font-size:.75rem; font-weight:500;">From &#8358;55,000</span>
 						</div>
-						<h5 class="text-white mb-2"><a href="service-data.html" class="text-white text-decoration-none">Data Analysis &amp; Reporting</a></h5>
+						<h3 class="h5 text-white mb-2"><a href="service-data.html" class="text-white text-decoration-none">Data Analysis &amp; Reporting</a></h3>
 						<p class="text-muted small mb-3">Turn your raw numbers into clear decisions. Dashboards and reports that show what's working at a glance.</p>
 						<ul class="list-unstyled small mb-4" style="color:rgba(255,255,255,0.4);">
 							<li class="mb-1">&rsaquo; Excel &amp; Power BI dashboards</li>
@@ -341,28 +351,28 @@
 				<div class="col-md-6 col-lg-3" data-aos="fade-up">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07);">
 						<p style="font-size:2.5rem; font-weight:700; color:rgba(46,157,99,0.2); margin:0 0 12px; line-height:1;">01</p>
-						<h6 class="text-white mb-2">Conversation</h6>
+						<h3 class="h6 text-white mb-2">Conversation</h3>
 						<p class="text-muted small mb-0">We start with a free call or WhatsApp chat. You tell us what you need. We listen, ask the right questions, and scope the work honestly.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07);">
 						<p style="font-size:2.5rem; font-weight:700; color:rgba(46,157,99,0.2); margin:0 0 12px; line-height:1;">02</p>
-						<h6 class="text-white mb-2">Proposal</h6>
+						<h3 class="h6 text-white mb-2">Proposal</h3>
 						<p class="text-muted small mb-0">We send a clear breakdown: what's included, what it costs, how long it takes. No surprises, no ambiguity.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07);">
 						<p style="font-size:2.5rem; font-weight:700; color:rgba(46,157,99,0.2); margin:0 0 12px; line-height:1;">03</p>
-						<h6 class="text-white mb-2">We Build</h6>
+						<h3 class="h6 text-white mb-2">We Build</h3>
 						<p class="text-muted small mb-0">We get to work. You're kept in the loop with progress updates at each milestone, and your feedback shapes the outcome.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07);">
 						<p style="font-size:2.5rem; font-weight:700; color:rgba(46,157,99,0.2); margin:0 0 12px; line-height:1;">04</p>
-						<h6 class="text-white mb-2">Delivered &amp; Supported</h6>
+						<h3 class="h6 text-white mb-2">Delivered &amp; Supported</h3>
 						<p class="text-muted small mb-0">We hand over everything, walk you through it, and stay available. Most clients come back for the next project.</p>
 					</div>
 				</div>
@@ -379,7 +389,7 @@
 					<div class="d-flex gap-3">
 						<span class="feather-check-circle mt-1 flex-shrink-0" style="font-size:1.3rem; color:#2e9d63;"></span>
 						<div>
-							<h6 class="text-white mb-1">Honest pricing, upfront</h6>
+							<h3 class="h6 text-white mb-1">Honest pricing, upfront</h3>
 							<p class="text-muted small mb-0">Every service has a clear starting price. You'll always know what you're paying and why before any work begins.</p>
 						</div>
 					</div>
@@ -388,7 +398,7 @@
 					<div class="d-flex gap-3">
 						<span class="feather-check-circle mt-1 flex-shrink-0" style="font-size:1.3rem; color:#2e9d63;"></span>
 						<div>
-							<h6 class="text-white mb-1">One person accountable</h6>
+							<h3 class="h6 text-white mb-1">One person accountable</h3>
 							<p class="text-muted small mb-0">You deal with the same person from brief to delivery. No hand-offs, no lost context, no "I'll check with the team."</p>
 						</div>
 					</div>
@@ -397,7 +407,7 @@
 					<div class="d-flex gap-3">
 						<span class="feather-check-circle mt-1 flex-shrink-0" style="font-size:1.3rem; color:#2e9d63;"></span>
 						<div>
-							<h6 class="text-white mb-1">Built for African business</h6>
+							<h3 class="h6 text-white mb-1">Built for African business</h3>
 							<p class="text-muted small mb-0">We understand the specific constraints (power, bandwidth, budget) and build solutions that actually work in that reality.</p>
 						</div>
 					</div>
@@ -406,7 +416,7 @@
 					<div class="d-flex gap-3">
 						<span class="feather-check-circle mt-1 flex-shrink-0" style="font-size:1.3rem; color:#2e9d63;"></span>
 						<div>
-							<h6 class="text-white mb-1">Fast turnaround</h6>
+							<h3 class="h6 text-white mb-1">Fast turnaround</h3>
 							<p class="text-muted small mb-0">Most projects are scoped for 1–4 weeks. We move at the pace your business needs.</p>
 						</div>
 					</div>
@@ -415,7 +425,7 @@
 					<div class="d-flex gap-3">
 						<span class="feather-check-circle mt-1 flex-shrink-0" style="font-size:1.3rem; color:#2e9d63;"></span>
 						<div>
-							<h6 class="text-white mb-1">You own everything</h6>
+							<h3 class="h6 text-white mb-1">You own everything</h3>
 							<p class="text-muted small mb-0">Full source files, login credentials, code, and docs handed over at delivery. Nothing locked behind a subscription.</p>
 						</div>
 					</div>
@@ -424,7 +434,7 @@
 					<div class="d-flex gap-3">
 						<span class="feather-check-circle mt-1 flex-shrink-0" style="font-size:1.3rem; color:#2e9d63;"></span>
 						<div>
-							<h6 class="text-white mb-1">Six services, one team</h6>
+							<h3 class="h6 text-white mb-1">Six services, one team</h3>
 							<p class="text-muted small mb-0">Web, brand, marketing, IT, data, consulting: all under one roof means your projects talk to each other.</p>
 						</div>
 					</div>
@@ -451,11 +461,13 @@
 	</div>
 
 	<!-- FOOTER -->
+	</main>
+
 	<div class="site-footer">
 		<div class="container">
 			<div class="row mb-4 pb-4" style="border-bottom:1px solid rgba(255,255,255,0.05);">
 				<div class="col-12">
-					<a href="index.html" class="logo logo-kengalia" aria-label="Kengalia">
+					<a href="index.html" class="logo logo-kengalia">
 						<span class="logo-kengalia-main">Kengalia</span>
 						<span class="logo-kengalia-sub"><span class="logo-kengalia-line"></span><span class="logo-kengalia-concepts">concepts</span></span>
 					</a>
@@ -496,17 +508,17 @@
 							<li><a href="index.html">&larr; Kengalia</a></li>
 						</ul>
 						<ul class="list-unstyled social">
-							<li><a href="https://www.instagram.com/uzodinma_godspower/" target="_blank"><span class="icon-instagram"></span></a></li>
-							<li><a href="https://x.com/_Animalitic" target="_blank"><span class="icon-twitter"></span></a></li>
-							<li><a href="https://www.linkedin.com/in/godspower-uzodinma-71252018a/" target="_blank"><span class="icon-linkedin"></span></a></li>
-							<li><a href="https://github.com/godxpowerx" target="_blank"><span class="icon-github"></span></a></li>
+							<li><a href="https://www.instagram.com/uzodinma_godspower/" target="_blank" aria-label="Instagram"><span class="icon-instagram"></span></a></li>
+							<li><a href="https://x.com/_Animalitic" target="_blank" aria-label="Twitter / X"><span class="icon-twitter"></span></a></li>
+							<li><a href="https://www.linkedin.com/in/godspower-uzodinma-71252018a/" target="_blank" aria-label="LinkedIn"><span class="icon-linkedin"></span></a></li>
+							<li><a href="https://github.com/godxpowerx" target="_blank" aria-label="GitHub"><span class="icon-github"></span></a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="row mt-5">
 				<div class="col-12 text-center">
-					<p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kengalia Technologies, a Kengalia Concept company.<span class="d-block mt-1" style="font-size:.8rem; opacity:.55;">Template by <a href="https://untree.co">Untree.co</a></span></p>
+					<p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kengalia Technologies, a Kengalia Concept company.<span class="d-block mt-1" style="font-size:.8rem;">Template by <a href="https://untree.co">Untree.co</a></span></p>
 				</div>
 			</div>
 		</div>

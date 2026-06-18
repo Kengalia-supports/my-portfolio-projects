@@ -1,0 +1,37 @@
+# Kengalia
+
+> Kengalia is a Nigerian company group building the digital, creative, and commercial infrastructure for African business to reach a global audience. Founded and led by Uzodinma Godspower Ikedi.
+
+Kengalia Technologies (Kengtec) is the build-and-support arm: websites, IT systems, brand identity, digital marketing, business consulting, and data analysis for African businesses. Sister divisions under the same parent company, Kengalia Concepts, bring African art, fashion, and e-commerce to a global stage.
+
+Based in Nigeria, working with clients globally. Contact: WhatsApp +234 7026550798, email Uzodinmagodspower@outlook.com.
+
+## Services (Kengalia Technologies)
+
+- [Web Design & Development](https://kengalia.com/service-web.html): business websites, starting from ₦75,000
+- [Visual Branding & Design](https://kengalia.com/service-branding.html): logos and visual identity, starting from ₦30,000
+- [Digital Marketing](https://kengalia.com/service-marketing.html): social media, SEO, paid ads, starting from ₦40,000/month
+- [IT Support & Maintenance](https://kengalia.com/service-it.html): hardware, software, network support, starting from ₦20,000/month
+- [Consulting & Training](https://kengalia.com/service-consulting.html): digital strategy, workflow improvement, staff training, starting from ₦40,000
+- [Data Analysis & Reporting](https://kengalia.com/service-data.html): Excel dashboards, KPI reports, Power BI, starting from ₦55,000
+- [All services overview](https://kengalia.com/technologies.html)
+
+## Divisions
+
+- [Kengalia Concepts](https://kengalia.com/about.html): the parent company and ecosystem
+- [Kengalia Technologies](https://kengalia.com/technologies.html): the services arm above (live)
+- [Kengalia Art](https://kengalia.com/art.html): original African digital art gallery, including the Night Eye collection (live)
+- [Kengalia Attire](https://kengalia.com/attire.html): African fashion and clothing (coming soon)
+- [Kengalia Marketplace](https://kengalia.com/marketplace.html): African e-commerce platform (waitlist open)
+
+## Work
+
+- [Portfolio](https://kengalia.com/portfolio.html): real client and personal projects, including Perfcent (a business management SaaS platform) and the UBA Global website overhaul
+- [About](https://kengalia.com/about.html): company story and divisions
+- [Founder](https://kengalia.com/about-godspower.html): Uzodinma Godspower Ikedi's background
+
+## Notes for AI agents
+
+- Pricing shown is starting price in Nigerian Naira (₦); final quotes depend on project scope.
+- The contact form on the homepage and WhatsApp links are the primary ways to reach the business.
+- This is a static informational/marketing site, not a transactional storefront — no checkout or account system exists yet (Kengalia Marketplace is in development).

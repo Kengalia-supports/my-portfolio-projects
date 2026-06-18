@@ -34,8 +34,12 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600&family=Dancing+Script:wght@700&family=Raleway:wght@300;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="fonts/icomoon/style.css">
-	<link rel="stylesheet" href="fonts/feather/style.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="fonts/feather/style.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="fonts/icomoon/style.css">
+		<link rel="stylesheet" href="fonts/feather/style.css">
+	</noscript>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/dark-theme.css">
 </head>
@@ -53,7 +57,7 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="art.html" class="logo logo-kengalia m-0" aria-label="Kengalia Art">
+				<a href="art.html" class="logo logo-kengalia m-0">
 					<span class="logo-kengalia-main">Kengalia</span>
 					<span class="logo-kengalia-sub">
 						<span class="logo-kengalia-line"></span>
@@ -79,12 +83,14 @@
 					<li><a href="marketplace.html" style="opacity:.35;">Marketplace</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
-				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" aria-label="Open menu" data-toggle="collapse" data-target="#main-navbar">
 					<span></span>
 				</a>
 			</div>
 		</div>
 	</nav>
+
+	<main>
 
 	<!-- HERO: freestyle art banner slider -->
 	<section class="art-hero">
@@ -182,6 +188,8 @@
 			</span>
 		</a>
 	</div>
+
+	</main>
 
 	<div id="overlayer"></div>
 	<div class="loader">

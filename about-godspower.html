@@ -19,11 +19,18 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Dancing+Script:wght@700&family=Raleway:wght@300;800&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="fonts/icomoon/style.css">
-	<link rel="stylesheet" href="fonts/feather/style.css">
-	<link rel="stylesheet" href="css/tiny-slider.css">
-	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="css/glightbox.min.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="fonts/feather/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/tiny-slider.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/aos.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/glightbox.min.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="fonts/icomoon/style.css">
+		<link rel="stylesheet" href="fonts/feather/style.css">
+		<link rel="stylesheet" href="css/tiny-slider.css">
+		<link rel="stylesheet" href="css/aos.css">
+		<link rel="stylesheet" href="css/glightbox.min.css">
+	</noscript>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/dark-theme.css">
 
@@ -43,7 +50,7 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="index.html" class="logo logo-kengalia m-0" aria-label="Kengalia">
+				<a href="index.html" class="logo logo-kengalia m-0">
 					<span class="logo-kengalia-main">Kengalia</span>
 					<span class="logo-kengalia-sub"><span class="logo-kengalia-line"></span><span class="logo-kengalia-concepts">concepts</span></span>
 				</a>
@@ -65,12 +72,14 @@
 					<li><a href="marketplace.html">Marketplace</a></li>
 					<li class="active"><a href="about.html">About</a></li>
 				</ul>
-				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" aria-label="Open menu" data-toggle="collapse" data-target="#main-navbar">
 					<span></span>
 				</a>
 			</div>
 		</div>
 	</nav>
+
+	<main>
 
 
 	<!-- HERO -->
@@ -124,7 +133,7 @@
 
 				<!-- Experience + Education -->
 				<div class="col-lg-6 offset-lg-1" data-aos="fade-up" data-aos-delay="100">
-					<h4 style="color:#2e9d63; font-size:.75rem; letter-spacing:3px; text-transform:uppercase; margin-bottom:1.5rem; padding-bottom:.75rem; border-bottom:1px solid rgba(46,157,99,0.15);">Professional Experience</h4>
+					<h2 style="color:#2e9d63; font-size:.75rem; letter-spacing:3px; text-transform:uppercase; margin-bottom:1.5rem; padding-bottom:.75rem; border-bottom:1px solid rgba(46,157,99,0.15);">Professional Experience</h2>
 					<div style="display:flex; flex-direction:column; gap:1.2rem; margin-bottom:2.5rem;">
 						<div style="display:flex; gap:1rem; align-items:flex-start;">
 							<div style="width:6px; min-width:6px; height:6px; border-radius:50%; background:#2e9d63; margin-top:.55rem;"></div>
@@ -177,7 +186,7 @@
 						</div>
 					</div>
 
-					<h4 style="color:#2e9d63; font-size:.75rem; letter-spacing:3px; text-transform:uppercase; margin-bottom:1.5rem; padding-bottom:.75rem; border-bottom:1px solid rgba(46,157,99,0.15);">Education</h4>
+					<h2 style="color:#2e9d63; font-size:.75rem; letter-spacing:3px; text-transform:uppercase; margin-bottom:1.5rem; padding-bottom:.75rem; border-bottom:1px solid rgba(46,157,99,0.15);">Education</h2>
 					<div style="display:flex; flex-direction:column; gap:1.5rem;">
 						<div>
 							<p style="margin:0; font-size:.9rem; color:#fff; font-weight:500;">PGD, Business Information System Management</p>
@@ -214,21 +223,21 @@
 				<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
 					<div class="rounded h-100 p-4" style="background:#0d0d0d; border:1px solid rgba(46,157,99,0.2);">
 						<span class="subheading d-inline-block mb-2">Google · Coursera</span>
-						<h5 class="mb-2" style="font-size:1rem; line-height:1.4; color:#fff;">Google IT Support Professional Certificate</h5>
+						<h3 class="mb-2" style="font-size:1rem; line-height:1.4; color:#fff;">Google IT Support Professional Certificate</h3>
 						<p class="mb-0" style="font-size:.8rem; color:rgba(46,157,99,0.7);">January 2026</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
 					<div class="rounded h-100 p-4" style="background:#0d0d0d; border:1px solid rgba(46,157,99,0.2);">
 						<span class="subheading d-inline-block mb-2">Udemy</span>
-						<h5 class="mb-2" style="font-size:1rem; line-height:1.4; color:#fff;">Excel Data Analysis Toolkit</h5>
+						<h3 class="mb-2" style="font-size:1rem; line-height:1.4; color:#fff;">Excel Data Analysis Toolkit</h3>
 						<p class="mb-0" style="font-size:.8rem; color:rgba(46,157,99,0.7);">December 2024</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
 					<div class="rounded h-100 p-4" style="background:#0d0d0d; border:1px solid rgba(46,157,99,0.2);">
 						<span class="subheading d-inline-block mb-2">Gems · Microsoft</span>
-						<h5 class="mb-2" style="font-size:1rem; line-height:1.4; color:#fff;">Microsoft Power BI — Basic Training</h5>
+						<h3 class="mb-2" style="font-size:1rem; line-height:1.4; color:#fff;">Microsoft Power BI — Basic Training</h3>
 						<p class="mb-0" style="font-size:.8rem; color:rgba(46,157,99,0.7);">August 2024</p>
 					</div>
 				</div>
@@ -250,6 +259,8 @@
 
 
 	<!-- FOOTER -->
+	</main>
+
 	<div class="site-footer">
 		<div class="container">
 			<div class="row">
@@ -282,17 +293,17 @@
 							<li><a href="about.html">About Kengalia</a></li>
 						</ul>
 						<ul class="list-unstyled social">
-							<li><a href="https://www.instagram.com/uzodinma_godspower/" target="_blank"><span class="icon-instagram"></span></a></li>
-							<li><a href="https://x.com/_Animalitic" target="_blank"><span class="icon-twitter"></span></a></li>
-							<li><a href="https://www.linkedin.com/in/godspower-uzodinma-71252018a/" target="_blank"><span class="icon-linkedin"></span></a></li>
-							<li><a href="https://github.com/godxpowerx" target="_blank"><span class="icon-github"></span></a></li>
+							<li><a href="https://www.instagram.com/uzodinma_godspower/" target="_blank" aria-label="Instagram"><span class="icon-instagram"></span></a></li>
+							<li><a href="https://x.com/_Animalitic" target="_blank" aria-label="Twitter / X"><span class="icon-twitter"></span></a></li>
+							<li><a href="https://www.linkedin.com/in/godspower-uzodinma-71252018a/" target="_blank" aria-label="LinkedIn"><span class="icon-linkedin"></span></a></li>
+							<li><a href="https://github.com/godxpowerx" target="_blank" aria-label="GitHub"><span class="icon-github"></span></a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="row mt-5">
 				<div class="col-12 text-center">
-					<p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kengalia Technologies, a Kengalia Concept company.<span class="d-block mt-1" style="font-size:.8rem; opacity:.55;">Template by <a href="https://untree.co">Untree.co</a></span></p>
+					<p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kengalia Technologies, a Kengalia Concept company.<span class="d-block mt-1" style="font-size:.8rem;">Template by <a href="https://untree.co">Untree.co</a></span></p>
 				</div>
 			</div>
 		</div>

@@ -34,7 +34,7 @@ Bricolage Grotesque 800 + IBM Plex Mono 600. Class `.perfcent-c::before/::after`
 - Nav pill: `.nav-kengalia-link` — green bg, white text, Dancing Script
 
 **`<body class="kengtec-page">`** — Technologies service pages (service-*.html).
-- Logo: Pacifico "kengtec" mark
+- Logo: Dancing Script 700 "Kengtec" + Raleway 300 "kengalia technologies" label beneath (NOT Pacifico — old doc was wrong)
 - Back link at top: `&larr; All Services` → technologies.html
 
 ---
@@ -57,6 +57,7 @@ art.html                — Kengalia Art hub (gallery landing)
 art-night-eye.html      — Night Eye gallery (50 owl art pieces, full masonry)
 attire.html             — Kengalia Attire (holding page — not live yet)
 marketplace.html        — Kengalia Marketplace (holding page — not live yet)
+tasks.txt               — Handoff log (done / waiting-on-client / next-time / deploy notes) — check this first on resume
 css/dark-theme.css      — ALL custom styles go here (append only, never edit style.css)
 sitemap.xml             — Keep updated when adding pages
 robots.txt              — Standard allow all
@@ -111,6 +112,13 @@ All art images are CSS `background-image` only (not `<img>`) — download protec
 
 ---
 
+## Deploy / Hosting (live as of 2026-06-18)
+
+- **Domain:** kengalia.com — registered AND hosted with qservers.ng (cPanel). SSL active (AutoSSL), HTTP→HTTPS redirect confirmed working.
+- **Deploy model:** manual upload. Build a zip of the repo (excluding `.git`, `CLAUDE.md`, `tasks.txt`, `README.txt`, `LICENSE.txt`, `.vscode`) with files at the zip root, extract into `public_html` via cPanel File Manager.
+- Both `.htaccess` files (root + `images/kegaliaArt/`) must survive the upload — confirm hidden files are shown in cPanel.
+- After any local fix: rebuild the zip and re-upload — there is no git-deploy/CI on this project.
+
 ## Pending / Known Gaps
 
 - **Founder photo** — `images/godspower.jpg` missing. about.html + about-godspower.html show a fallback emoji placeholder. Drop the file in and the layout is ready.
@@ -118,6 +126,7 @@ All art images are CSS `background-image` only (not `<img>`) — download protec
 - **Attire page** — holding page only. Will need its own gallery when ready (same pattern as art-night-eye.html).
 - **Marketplace page** — holding page only.
 - **Second art album** — user plans another art album. Create `art-[name].html` following the art-night-eye.html pattern. Add card on art.html.
+- **Performance pass in progress** (started 2026-06-18) — see tasks.txt for the live Lighthouse baseline and what's left (font subsetting, async CSS, accessibility).
 
 ---
 
@@ -125,7 +134,11 @@ All art images are CSS `background-image` only (not `<img>`) — download protec
 
 - Never edit `css/style.css` — all custom CSS goes in `css/dark-theme.css` (append to end).
 - No AI language in copy ("AI-powered", "leverages AI", etc.).
+- **No em-dashes in body copy/prose** — reads as AI-written. Title-style "X — Y" labels (page `<title>`, case-study h2/h3 headings, image captions) are fine and intentionally kept; flowing sentences are not. If you must join two clauses, use a period, comma, or colon instead.
 - Prices in ₦ when shown. Nigerian market context applies.
 - WhatsApp contact: `+2347026550798`
 - GitHub remote: `https://github.com/Kengalia-supports/my-portfolio-projects.git`
 - Branch: `main`
+- **Bootstrap gutter trap:** never put a bare `g-5` (or any `g-*`/`gx-*` larger than the implicit default) on a `.row` that's a direct child of `.container` — the container's padding is fixed at the default gutter (12px/side) and won't grow to match, causing real horizontal overflow. Use `g-4` (1.5rem) which equals the default and always cancels cleanly. `gy-*` (vertical-only) is unaffected and safe at any size.
+- **Hero sections using `min-height:100vh; display:flex; align-items:center;`** under the absolutely-positioned `.site-nav` need explicit `padding-top`/`padding-bottom` on that same flex container (not just relying on centering) or content can render clipped behind the nav on short viewports. Current safe value: `padding-top:120px; padding-bottom:40px;`.
+- **Visual bugs:** don't guess from reading CSS/HTML alone — screenshot the actual rendered page (Puppeteer via `puppeteer-core` pointed at the real Chrome install works well on this Windows box; use a local `python -m http.server` to test fixes before they're live, since the deploy model has no staging). Wait for `document.fonts.ready` before screenshotting or icon/logo fonts render blank.

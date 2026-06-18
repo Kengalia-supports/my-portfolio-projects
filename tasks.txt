@@ -1,5 +1,5 @@
 KENGALIA.COM — TASK / HANDOFF LOG
-Updated: 2026-06-17
+Updated: 2026-06-18
 
 ================================================================
 DONE
@@ -17,6 +17,66 @@ DONE
 - Art images optimized to WebP: 166 MB -> 25 MB (-85%). All refs updated.
 - Art download protection: server-side hotlink lock (kegaliaArt/.htaccess)
   + CSS/JS blocks (no right-click, no drag, no iOS long-press save).
+- DOMAIN + HOSTING LIVE: kengalia.com resolved via qservers, SSL active,
+  HTTP->HTTPS redirect confirmed working.
+- Site went live, then fixed a batch of real bugs found post-launch:
+  - Hero text on marketplace/attire/index was clipped by the nav bar
+    (no top clearance reserved against position:absolute nav).
+  - Bootstrap g-5 gutter class (10 spots, 7 files) exceeded container
+    padding -> 12px horizontal overflow -> nav/burger misalignment on
+    mobile. Replaced with g-4 everywhere.
+  - Green h2 accent-line stuck left instead of centering in text-center
+    sections (Art Collection, every CTA).
+  - 16 two-button CTA pairs had no flex wrapper -> uneven mobile wrap.
+    Wired up the existing-but-unused .btn-cta-row CSS class.
+  - Sitewide mojibake (UTF-8 re-saved as Windows-1252): broken checkmarks,
+    en dashes, minus sign, not-equal sign across 8 files.
+  - Removed em-dashes from ~105 spots of body copy (kept them only in
+    page titles / case-study headings, which is normal, not an AI tell).
+  - Removed Kengalia-by-Nigerians logo from About partners row (wasn't
+    a partner); kept the file, moved to images/brand/, renamed.
+  - Art division is live: un-dimmed its nav link on attire/marketplace,
+    gave its homepage card the active styling, made the Portfolio "Art
+    Collection — Coming Soon" placeholder a real link to the gallery.
+- PERFORMANCE PASS (done, 2026-06-18):
+  - Baseline Lighthouse (live site): Performance 55/56 (mobile/desktop),
+    Accessibility 86, Best Practices 100, SEO 100.
+  - Final Lighthouse (local re-test): Performance 61/92, Accessibility
+    100/100, Best Practices 100 (shows 81 locally only because the local
+    test server is plain HTTP and ignores .htaccess — both checks pass on
+    the live HTTPS/Apache host), SEO 100/100.
+  - Added browser caching (.htaccess: mod_expires + Cache-Control by file
+    type, 1yr images/fonts, 1mo css/js) + gzip/deflate compression.
+  - Subsetted icomoon (307KB -> 1.3KB, 5 glyphs) and feather (81KB -> 5KB,
+    30 glyphs) icon fonts to woff2, only the glyphs actually used. Deleted
+    the old ttf/woff/eot/svg + demo-files + selection.json for both.
+  - Async-loaded non-critical CSS (icon fonts, tiny-slider, aos, glightbox)
+    via media=print/onload swap + noscript fallback. style.css and
+    dark-theme.css stay blocking (avoids FOUC on layout-critical rules).
+  - Minified css/style.css (vendor file, 276KB -> 218KB) and the two
+    unused/inert vendor JS libs, js/tiny-slider.js (99KB -> 32KB) and
+    js/aos.js (14KB -> 14KB). css/dark-theme.css and js/custom.js etc. were
+    NOT minified — those are hand-edited going forward, readability matters
+    more than the few KB saved.
+  - Accessibility fixes: <main> landmark on all 16 pages; aria-label on all
+    icon-only social links; h5/h6 skip-level headings promoted to h3 with
+    Bootstrap .h5/.h6 sizing classes (sequential hierarchy everywhere now);
+    fixed 4 separate WCAG AA contrast failures (--text-muted, both logo
+    sub-label classes, .site-footer p/a) that were under 4.5:1 on dark
+    backgrounds; removed mismatched aria-label from every logo link (was
+    only "Kengalia", visible text also included the division sub-label —
+    now lets the browser compute the accessible name from content so it
+    always matches); added aria-label="Open menu" to the nav burger button
+    (had zero accessible name before, also the one thing the new Lighthouse
+    "agentic browsing" audit flagged).
+  - Agentic-readiness: added llms.txt (services + pricing + divisions +
+    notes for AI agents). robots.txt already allows all crawlers by
+    default (no change needed).
+  - Known follow-up, not done: Lighthouse still flags ~350KB of unused
+    Bootstrap CSS and ~3.5s of render-blocking on mobile (simulated
+    throttling). Fixing this needs PurgeCSS-style unused-rule stripping,
+    which risks breaking utility classes invoked only from JS — bigger,
+    riskier job for its own session, not bundled into this pass.
 
 ================================================================
 WAITING ON CLIENT

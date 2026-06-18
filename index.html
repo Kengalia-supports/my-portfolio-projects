@@ -68,11 +68,18 @@
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Quicksand:wght@600&family=Pacifico&family=Dancing+Script:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="fonts/icomoon/style.css">
-	<link rel="stylesheet" href="fonts/feather/style.css">
-	<link rel="stylesheet" href="css/tiny-slider.css">
-	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="css/glightbox.min.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="fonts/feather/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/tiny-slider.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/aos.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/glightbox.min.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="fonts/icomoon/style.css">
+		<link rel="stylesheet" href="fonts/feather/style.css">
+		<link rel="stylesheet" href="css/tiny-slider.css">
+		<link rel="stylesheet" href="css/aos.css">
+		<link rel="stylesheet" href="css/glightbox.min.css">
+	</noscript>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/dark-theme.css">
 
@@ -92,7 +99,7 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="index.html" class="logo logo-kengalia m-0" aria-label="Kengalia">
+				<a href="index.html" class="logo logo-kengalia m-0">
 					<span class="logo-kengalia-main">Kengalia</span>
 					<span class="logo-kengalia-sub"><span class="logo-kengalia-line"></span><span class="logo-kengalia-concepts">concepts</span></span>
 				</a>
@@ -114,12 +121,14 @@
 					<li><a href="marketplace.html">Marketplace</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
-				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" aria-label="Open menu" data-toggle="collapse" data-target="#main-navbar">
 					<span></span>
 				</a>
 			</div>
 		</div>
 	</nav>
+
+	<main>
 
 	<!-- HERO &mdash; clean dark, no image (future: slideshow per division) -->
 	<div style="min-height:100vh; display:flex; align-items:center; padding-top:120px; padding-bottom:40px; background:#0a0a0a; position:relative; overflow:hidden;">
@@ -170,7 +179,7 @@
 				<div class="col-sm-6 col-lg-5" data-aos="fade-up">
 					<div class="h-100 rounded p-4" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:2px solid #2e9d63;">
 						<span class="feather-cpu mb-3 d-block" style="font-size:1.8rem; color:#2e9d63;"></span>
-						<h5 class="text-white mb-1">Kengalia Technologies</h5>
+						<h3 class="h5 text-white mb-1">Kengalia Technologies</h3>
 						<p class="text-muted small mb-3">The digital build-and-support arm: websites, systems, branding, consulting &amp; data.</p>
 						<ul class="list-unstyled list-2col mb-3" style="font-size:.8rem; color:rgba(255,255,255,0.45);">
 							<li class="mb-1">&rsaquo; Web Design</li>
@@ -188,7 +197,7 @@
 				<div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
 					<div class="h-100 rounded p-4" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:2px solid #2e9d63;">
 						<span class="feather-trending-up mb-3 d-block" style="font-size:1.8rem; color:#2e9d63;"></span>
-						<h5 class="text-white mb-1">Perfcent</h5>
+						<h3 class="h5 text-white mb-1">Perfcent</h3>
 						<p class="text-muted small mb-3">Business performance SaaS: tools and dashboards that turn your data into decisions.</p>
 						<a href="https://perfcent.com" target="_blank" class="btn btn-sm btn-black">Visit &rarr;</a>
 					</div>
@@ -198,7 +207,7 @@
 				<div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
 					<div class="h-100 rounded p-4" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:1px solid rgba(255,255,255,0.1);">
 						<span class="feather-shopping-bag mb-3 d-block" style="font-size:1.8rem; color:rgba(255,255,255,0.25);"></span>
-						<h5 class="text-white mb-1">Kengalia Marketplace</h5>
+						<h3 class="h5 text-white mb-1">Kengalia Marketplace</h3>
 						<p class="text-muted small mb-3">An African marketplace to buy, sell, and trade. Built to give African products the global reach they deserve.</p>
 						<a href="marketplace.html" class="btn btn-sm btn-black">Explore &rarr;</a>
 					</div>
@@ -208,7 +217,7 @@
 				<div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
 					<div class="h-100 rounded p-4" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:2px solid #2e9d63;">
 						<span class="feather-image mb-3 d-block" style="font-size:1.8rem; color:#2e9d63;"></span>
-						<h5 class="text-white mb-1">Kengalia Art</h5>
+						<h3 class="h5 text-white mb-1">Kengalia Art</h3>
 						<p class="text-muted small mb-3">African visual art and creative works, a gallery bringing African artistic expression to a global audience.</p>
 						<a href="art.html" class="btn btn-sm btn-black">Explore &rarr;</a>
 					</div>
@@ -218,7 +227,7 @@
 				<div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
 					<div class="h-100 rounded p-4" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:1px solid rgba(255,255,255,0.1);">
 						<span class="feather-scissors mb-3 d-block" style="font-size:1.8rem; color:rgba(255,255,255,0.25);"></span>
-						<h5 class="text-white mb-1">Kengalia Attire</h5>
+						<h3 class="h5 text-white mb-1">Kengalia Attire</h3>
 						<p class="text-muted small mb-3">Premium African attire: distinctive design rooted in identity, crafted for the world.</p>
 						<a href="attire.html" class="btn btn-sm btn-black">Explore &rarr;</a>
 					</div>
@@ -268,6 +277,8 @@
 	</div>
 
 	<!-- FOOTER -->
+	</main>
+
 	<div class="site-footer">
 		<div class="container">
 			<div class="row">
@@ -300,17 +311,17 @@
 							<li><a href="about.html">About Us</a></li>
 						</ul>
 						<ul class="list-unstyled social">
-							<li><a href="https://www.instagram.com/uzodinma_godspower/" target="_blank"><span class="icon-instagram"></span></a></li>
-							<li><a href="https://x.com/_Animalitic" target="_blank"><span class="icon-twitter"></span></a></li>
-							<li><a href="https://www.linkedin.com/in/godspower-uzodinma-71252018a/" target="_blank"><span class="icon-linkedin"></span></a></li>
-							<li><a href="https://github.com/godxpowerx" target="_blank"><span class="icon-github"></span></a></li>
+							<li><a href="https://www.instagram.com/uzodinma_godspower/" target="_blank" aria-label="Instagram"><span class="icon-instagram"></span></a></li>
+							<li><a href="https://x.com/_Animalitic" target="_blank" aria-label="Twitter / X"><span class="icon-twitter"></span></a></li>
+							<li><a href="https://www.linkedin.com/in/godspower-uzodinma-71252018a/" target="_blank" aria-label="LinkedIn"><span class="icon-linkedin"></span></a></li>
+							<li><a href="https://github.com/godxpowerx" target="_blank" aria-label="GitHub"><span class="icon-github"></span></a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="row mt-5">
 				<div class="col-12 text-center">
-					<p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kengalia, a Kengalia Concept company.<span class="d-block mt-1" style="font-size:.8rem; opacity:.55;">Template by <a href="https://untree.co">Untree.co</a></span></p>
+					<p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kengalia, a Kengalia Concept company.<span class="d-block mt-1" style="font-size:.8rem;">Template by <a href="https://untree.co">Untree.co</a></span></p>
 				</div>
 			</div>
 		</div>

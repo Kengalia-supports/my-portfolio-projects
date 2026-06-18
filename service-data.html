@@ -20,10 +20,16 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway:wght@300&family=Pacifico&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="fonts/icomoon/style.css">
-	<link rel="stylesheet" href="fonts/feather/style.css">
-	<link rel="stylesheet" href="css/tiny-slider.css">
-	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="fonts/feather/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/tiny-slider.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/aos.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="fonts/icomoon/style.css">
+		<link rel="stylesheet" href="fonts/feather/style.css">
+		<link rel="stylesheet" href="css/tiny-slider.css">
+		<link rel="stylesheet" href="css/aos.css">
+	</noscript>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/dark-theme.css">
 	<title>Data Analysis Nigeria &mdash; Excel Dashboards &amp; Business Reports | Kengalia Technologies</title>
@@ -36,7 +42,7 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="technologies.html" class="logo logo-kengtec m-0" aria-label="Kengalia Technologies">
+				<a href="technologies.html" class="logo logo-kengtec m-0">
 					<span class="logo-kengtec-main">Kengtec</span>
 					<span class="logo-kengtec-sub"><span class="logo-kengtec-label">kengalia technologies</span></span>
 				</a>
@@ -56,12 +62,15 @@
 					<li><a href="portfolio.html">Portfolio</a></li>
 					<li><a href="art.html">Art</a></li>
 					<li><a href="attire.html">Attire</a></li>
+					<li><a href="marketplace.html">Marketplace</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
-				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light"><span></span></a>
+				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" aria-label="Open menu"><span></span></a>
 			</div>
 		</div>
 	</nav>
+
+	<main>
 
 	<div class="section" style="padding-top:140px; padding-bottom:60px; background:#0a0a0a; position:relative; overflow:hidden;">
 		<div style="position:absolute; top:0; right:-100px; width:500px; height:500px; background:radial-gradient(ellipse, rgba(46,157,99,0.06) 0%, transparent 70%); pointer-events:none;"></div>
@@ -162,37 +171,37 @@
 			<div class="row g-4">
 				<div class="col-md-6 col-lg-4" data-aos="fade-up">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:2px solid #2e9d63;">
-						<h6 class="text-white mb-2">Excel Dashboards</h6>
+						<h3 class="h6 text-white mb-2">Excel Dashboards</h3>
 						<p class="text-muted small mb-0">Interactive, automated dashboards built in Excel or Google Sheets. Refresh with new data in minutes. Charts, tables, summaries, all in one view.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:2px solid #2e9d63;">
-						<h6 class="text-white mb-2">Sales &amp; Revenue Analysis</h6>
+						<h3 class="h6 text-white mb-2">Sales &amp; Revenue Analysis</h3>
 						<p class="text-muted small mb-0">What's selling, what isn't, which customers generate the most value, peak periods, and where margin is being lost.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:2px solid #2e9d63;">
-						<h6 class="text-white mb-2">KPI Tracking Reports</h6>
+						<h3 class="h6 text-white mb-2">KPI Tracking Reports</h3>
 						<p class="text-muted small mb-0">Define the metrics that matter to your business, build the tracking system, and get a weekly or monthly report you can read in five minutes.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:2px solid #2e9d63;">
-						<h6 class="text-white mb-2">Financial Reporting</h6>
+						<h3 class="h6 text-white mb-2">Financial Reporting</h3>
 						<p class="text-muted small mb-0">Cash flow statements, cost breakdowns, P&L summaries built from your existing records. Ready for management reviews or investor meetings.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:2px solid #2e9d63;">
-						<h6 class="text-white mb-2">Data Cleanup &amp; Organisation</h6>
+						<h3 class="h6 text-white mb-2">Data Cleanup &amp; Organisation</h3>
 						<p class="text-muted small mb-0">Raw, messy data in multiple places. We consolidate, clean, and structure it so every future report is built on a solid foundation.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07); border-top:2px solid #2e9d63;">
-						<h6 class="text-white mb-2">Market &amp; Competitor Research</h6>
+						<h3 class="h6 text-white mb-2">Market &amp; Competitor Research</h3>
 						<p class="text-muted small mb-0">Structured research reports on market size, pricing benchmarks, competitor positioning, packaged for decision-making, not just reading.</p>
 					</div>
 				</div>
@@ -208,28 +217,28 @@
 				<div class="col-md-6 col-lg-3" data-aos="fade-up">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07);">
 						<p style="font-size:2rem; font-weight:700; color:rgba(46,157,99,0.25); margin:0 0 8px;">01</p>
-						<h6 class="text-white mb-2">Data Collection</h6>
+						<h3 class="h6 text-white mb-2">Data Collection</h3>
 						<p class="text-muted small mb-0">You share what you have: spreadsheets, exports, even photos of records. No judgement. We work with what exists.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07);">
 						<p style="font-size:2rem; font-weight:700; color:rgba(46,157,99,0.25); margin:0 0 8px;">02</p>
-						<h6 class="text-white mb-2">Clean &amp; Structure</h6>
+						<h3 class="h6 text-white mb-2">Clean &amp; Structure</h3>
 						<p class="text-muted small mb-0">We clean the data, remove duplicates, standardise formats, and build the data model the analysis will run on.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07);">
 						<p style="font-size:2rem; font-weight:700; color:rgba(46,157,99,0.25); margin:0 0 8px;">03</p>
-						<h6 class="text-white mb-2">Build &amp; Visualise</h6>
+						<h3 class="h6 text-white mb-2">Build &amp; Visualise</h3>
 						<p class="text-muted small mb-0">Dashboard, charts, and tables built to answer the specific questions your business needs answered.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
 					<div class="p-4 rounded h-100" style="background:#111; border:1px solid rgba(255,255,255,0.07);">
 						<p style="font-size:2rem; font-weight:700; color:rgba(46,157,99,0.25); margin:0 0 8px;">04</p>
-						<h6 class="text-white mb-2">Handover &amp; Brief</h6>
+						<h3 class="h6 text-white mb-2">Handover &amp; Brief</h3>
 						<p class="text-muted small mb-0">We walk you through the findings and show you how to update and use the dashboard going forward.</p>
 					</div>
 				</div>
@@ -243,7 +252,7 @@
 			<div class="row g-4">
 				<div class="col-md-4" data-aos="fade-up">
 					<div class="h-100 rounded p-4" style="background:#111; border:1px solid rgba(255,255,255,0.07);">
-						<h6 class="text-white mb-1">Single Report</h6>
+						<h3 class="h6 text-white mb-1">Single Report</h3>
 						<p class="text-muted small mb-3">One dataset, one output</p>
 						<p style="font-size:1.8rem; font-weight:700; color:#2e9d63; margin:0;">&#8358;55,000</p>
 						<p class="text-muted" style="font-size:.75rem;">one-time</p>
@@ -258,7 +267,7 @@
 				<div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
 					<div class="h-100 rounded p-4" style="background:#111; border:2px solid #2e9d63;">
 						<div class="d-flex justify-content-between align-items-center mb-1">
-							<h6 class="text-white mb-0">Business Dashboard</h6>
+							<h3 class="h6 text-white mb-0">Business Dashboard</h3>
 							<span class="badge" style="background:#2e9d63; color:#000; font-size:.7rem;">Popular</span>
 						</div>
 						<p class="text-muted small mb-3">Full multi-metric dashboard</p>
@@ -275,7 +284,7 @@
 				</div>
 				<div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
 					<div class="h-100 rounded p-4" style="background:#111; border:1px solid rgba(255,255,255,0.07);">
-						<h6 class="text-white mb-1">Monthly Reporting</h6>
+						<h3 class="h6 text-white mb-1">Monthly Reporting</h3>
 						<p class="text-muted small mb-3">Ongoing data &amp; reporting retainer</p>
 						<p style="font-size:1.8rem; font-weight:700; color:#2e9d63; margin:0;">&#8358;70,000</p>
 						<p class="text-muted" style="font-size:.75rem;">/month</p>
@@ -308,11 +317,13 @@
 		</div>
 	</div>
 
+	</main>
+
 	<div class="site-footer">
 		<div class="container">
 			<div class="row mb-4 pb-4" style="border-bottom:1px solid rgba(255,255,255,0.05);">
 				<div class="col-12">
-					<a href="index.html" class="logo logo-kengalia" aria-label="Kengalia">
+					<a href="index.html" class="logo logo-kengalia">
 						<span class="logo-kengalia-main">Kengalia</span>
 						<span class="logo-kengalia-sub"><span class="logo-kengalia-line"></span><span class="logo-kengalia-concepts">concepts</span></span>
 					</a>

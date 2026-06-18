@@ -1,13 +1,9 @@
 @font-face {
   font-family: 'feather';
-  src:  url('fonts/feather.eot?bv5i04');
-  src:  url('fonts/feather.eot?bv5i04#iefix') format('embedded-opentype'),
-    url('fonts/feather.ttf?bv5i04') format('truetype'),
-    url('fonts/feather.woff?bv5i04') format('woff'),
-    url('fonts/feather.svg?bv5i04#feather') format('svg');
+  src: url('fonts/feather-subset.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 
 [class^="feather-"], [class*=" feather-"] {

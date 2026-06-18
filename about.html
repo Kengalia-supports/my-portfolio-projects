@@ -36,11 +36,18 @@
 		.perfcent-c::after  { left:60%; }
 	</style>
 
-	<link rel="stylesheet" href="fonts/icomoon/style.css">
-	<link rel="stylesheet" href="fonts/feather/style.css">
-	<link rel="stylesheet" href="css/tiny-slider.css">
-	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="css/glightbox.min.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="fonts/feather/style.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/tiny-slider.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/aos.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="css/glightbox.min.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="fonts/icomoon/style.css">
+		<link rel="stylesheet" href="fonts/feather/style.css">
+		<link rel="stylesheet" href="css/tiny-slider.css">
+		<link rel="stylesheet" href="css/aos.css">
+		<link rel="stylesheet" href="css/glightbox.min.css">
+	</noscript>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/dark-theme.css">
 
@@ -60,7 +67,7 @@
 	<nav class="site-nav">
 		<div class="container">
 			<div class="site-navigation">
-				<a href="index.html" class="logo logo-kengalia m-0" aria-label="Kengalia">
+				<a href="index.html" class="logo logo-kengalia m-0">
 					<span class="logo-kengalia-main">Kengalia</span>
 					<span class="logo-kengalia-sub"><span class="logo-kengalia-line"></span><span class="logo-kengalia-concepts">concepts</span></span>
 				</a>
@@ -82,12 +89,14 @@
 					<li><a href="marketplace.html">Marketplace</a></li>
 					<li class="active"><a href="about.html">About</a></li>
 				</ul>
-				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+				<a href="#" class="burger ms-auto float-end site-menu-toggle mt-2 js-menu-toggle d-inline-block d-lg-none light" aria-label="Open menu" data-toggle="collapse" data-target="#main-navbar">
 					<span></span>
 				</a>
 			</div>
 		</div>
 	</nav>
+
+	<main>
 
 
 	<!-- ===== HERO ===== -->
@@ -302,7 +311,7 @@
 						</div>
 						<!-- Info -->
 						<div style="padding:1.5rem;">
-							<h5 style="color:#fff; margin:0 0 .25rem; font-size:1rem;">Uzodinma Godspower Ikedi</h5>
+							<h3 style="color:#fff; margin:0 0 .25rem; font-size:1rem;">Uzodinma Godspower Ikedi</h3>
 							<p style="font-size:.75rem; color:#2e9d63; letter-spacing:2px; text-transform:uppercase; margin-bottom:1rem;">Founder &amp; Lead Specialist</p>
 							<p style="font-size:.85rem; color:rgba(255,255,255,0.45); line-height:1.75; margin-bottom:1.2rem;">Information Systems Specialist. Builder of Kengalia from Nigeria, working globally.</p>
 							<a href="about-godspower.html" class="btn btn-sm btn-black">Full Profile &rarr;</a>
@@ -376,6 +385,8 @@
 
 
 	<!-- ===== FOOTER ===== -->
+	</main>
+
 	<div class="site-footer">
 		<div class="container">
 			<div class="row">
@@ -408,17 +419,17 @@
 							<li><a href="about.html">About Us</a></li>
 						</ul>
 						<ul class="list-unstyled social">
-							<li><a href="https://www.instagram.com/uzodinma_godspower/" target="_blank"><span class="icon-instagram"></span></a></li>
-							<li><a href="https://x.com/_Animalitic" target="_blank"><span class="icon-twitter"></span></a></li>
-							<li><a href="https://www.linkedin.com/in/godspower-uzodinma-71252018a/" target="_blank"><span class="icon-linkedin"></span></a></li>
-							<li><a href="https://github.com/godxpowerx" target="_blank"><span class="icon-github"></span></a></li>
+							<li><a href="https://www.instagram.com/uzodinma_godspower/" target="_blank" aria-label="Instagram"><span class="icon-instagram"></span></a></li>
+							<li><a href="https://x.com/_Animalitic" target="_blank" aria-label="Twitter / X"><span class="icon-twitter"></span></a></li>
+							<li><a href="https://www.linkedin.com/in/godspower-uzodinma-71252018a/" target="_blank" aria-label="LinkedIn"><span class="icon-linkedin"></span></a></li>
+							<li><a href="https://github.com/godxpowerx" target="_blank" aria-label="GitHub"><span class="icon-github"></span></a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="row mt-5">
 				<div class="col-12 text-center">
-					<p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kengalia Technologies, a Kengalia Concept company.<span class="d-block mt-1" style="font-size:.8rem; opacity:.55;">Template by <a href="https://untree.co">Untree.co</a></span></p>
+					<p class="mb-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> Kengalia Technologies, a Kengalia Concept company.<span class="d-block mt-1" style="font-size:.8rem;">Template by <a href="https://untree.co">Untree.co</a></span></p>
 				</div>
 			</div>
 		</div>
