@@ -63,6 +63,7 @@
 	}
 	</script>
 
+	<link rel="preload" as="image" href="images/kengalia-hero-owls.webp">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -70,15 +71,11 @@
 
 	<link rel="stylesheet" href="fonts/icomoon/style.css" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="fonts/feather/style.css" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="css/tiny-slider.css" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="css/aos.css" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="css/glightbox.min.css" media="print" onload="this.media='all'">
 	<noscript>
 		<link rel="stylesheet" href="fonts/icomoon/style.css">
 		<link rel="stylesheet" href="fonts/feather/style.css">
-		<link rel="stylesheet" href="css/tiny-slider.css">
 		<link rel="stylesheet" href="css/aos.css">
-		<link rel="stylesheet" href="css/glightbox.min.css">
 	</noscript>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/dark-theme.css">
@@ -86,6 +83,7 @@
 	<title>Digital Services for African Business &mdash; Kengalia | Nigeria &amp; Worldwide</title>
 </head>
 <body class="kengalia-home">
+	<a href="#" class="back-to-top" aria-label="Back to top">&uarr;</a>
 
 	<div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
@@ -130,8 +128,8 @@
 
 	<main>
 
-	<!-- HERO &mdash; clean dark, no image (future: slideshow per division) -->
-	<div style="min-height:100vh; display:flex; align-items:center; padding-top:120px; padding-bottom:40px; background:#0a0a0a; position:relative; overflow:hidden;">
+	<!-- HERO -->
+	<div style="min-height:100vh; display:flex; align-items:center; padding-top:120px; padding-bottom:40px; background:#0a0a0a url('images/kengalia-hero-owls.webp') top center / 100% auto no-repeat; position:relative; overflow:hidden;">
 		<!-- subtle radial glow -->
 		<div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:700px; height:700px; background:radial-gradient(ellipse at center, rgba(46,157,99,0.07) 0%, transparent 70%); pointer-events:none;"></div>
 		<div class="container" style="position:relative; z-index:2;">
@@ -335,12 +333,8 @@
 		</div>
 	</div>
 
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/tiny-slider.js"></script>
 	<script src="js/aos.js"></script>
 	<script src="js/navbar.js"></script>
-	<script src="js/glightbox.min.js"></script>
-	<script src="js/rellax.min.js"></script>
 	<script src="js/custom.js"></script>
 </body>
 </html>

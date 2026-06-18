@@ -151,6 +151,27 @@
 	stickyNav();
 
 
+	// Back to top
+	var backToTop = function() {
+		var btn = document.querySelector('.back-to-top');
+		if (!btn) return;
+		var onScroll = function() {
+			if (window.scrollY > 400) {
+				btn.classList.add('show');
+			} else {
+				btn.classList.remove('show');
+			}
+		};
+		window.addEventListener('scroll', onScroll, { passive: true });
+		onScroll();
+		btn.addEventListener('click', function(e) {
+			e.preventDefault();
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+	};
+	backToTop();
+
+
 	// WhatsApp — open the conversation directly (app on mobile, WhatsApp Web chat on desktop)
 	// Skips the wa.me "Continue to Chat / Download" landing page.
 	var whatsappDirect = function() {
