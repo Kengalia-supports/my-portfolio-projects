@@ -41,23 +41,50 @@ DONE
 - PERFORMANCE PASS (done, 2026-06-18):
   - Baseline Lighthouse (live site): Performance 55/56 (mobile/desktop),
     Accessibility 86, Best Practices 100, SEO 100.
-  - Final Lighthouse (local re-test): Performance 61/92, Accessibility
+  - Final Lighthouse (local re-test): Performance 74/90, Accessibility
     100/100, Best Practices 100 (shows 81 locally only because the local
     test server is plain HTTP and ignores .htaccess — both checks pass on
     the live HTTPS/Apache host), SEO 100/100.
   - Added browser caching (.htaccess: mod_expires + Cache-Control by file
     type, 1yr images/fonts, 1mo css/js) + gzip/deflate compression.
-  - Subsetted icomoon (307KB -> 1.3KB, 5 glyphs) and feather (81KB -> 5KB,
-    30 glyphs) icon fonts to woff2, only the glyphs actually used. Deleted
-    the old ttf/woff/eot/svg + demo-files + selection.json for both.
+  - Subsetted icomoon (307KB -> 1.3KB woff2) and feather (81KB -> 5KB woff2)
+    icon FONT BINARIES to only the glyphs actually used. Deleted the old
+    ttf/woff/eot/svg + demo-files + selection.json for both. Separately
+    trimmed the icon font STYLESHEETS (which still listed every unused
+    glyph's CSS rule even after the binary was subsetted): icomoon/style.css
+    79.6KB -> 755 bytes (4 rules kept), feather/style.css 14.4KB -> 2KB
+    (29 rules kept).
   - Async-loaded non-critical CSS (icon fonts, tiny-slider, aos, glightbox)
     via media=print/onload swap + noscript fallback. style.css and
     dark-theme.css stay blocking (avoids FOUC on layout-critical rules).
-  - Minified css/style.css (vendor file, 276KB -> 218KB) and the two
-    unused/inert vendor JS libs, js/tiny-slider.js (99KB -> 32KB) and
-    js/aos.js (14KB -> 14KB). css/dark-theme.css and js/custom.js etc. were
-    NOT minified — those are hand-edited going forward, readability matters
-    more than the few KB saved.
+  - Purged unused Bootstrap/template CSS from style.css with PurgeCSS
+    (content sources = all html + all js so any JS-added class is kept by
+    the default token scan), plus an explicit safelist for classes only
+    ever set via setAttribute/classList (offcanvas-menu, dropdown-open,
+    nav-scrolled, collapse/collapsing/show/collapsed, arrow-collapse,
+    site-nav-wrap). 276KB -> 55.7KB raw. Verified by screenshotting all 16
+    pages (after the correct AOS-trigger scroll sequence — a first pass
+    without it produced false "missing content" since AOS reveals never
+    fired) plus live-testing the 3 things a CSS purge most often breaks:
+    mobile menu toggle, hover nav dropdown, and the glightbox lightbox —
+    all confirmed working. Then minified: 276KB -> 42.7KB final (8.2KB
+    gzipped). Backups of every pre-purge file are in /c/tmp on this machine
+    if anything surfaces later that the screenshot pass missed.
+  - Tried adding `defer` to the 7 vendor/custom <script> tags (already at
+    the bottom of <body>) expecting a free win from parallel downloads.
+    Measured WORSE mobile performance (61 -> 55-59, TBT 170ms -> 270-340ms)
+    across 2 runs — defer made all scripts execute in one back-to-back
+    burst right after parse instead of naturally spaced out by sequential
+    download time, which hurt more than parallel download helped. Reverted.
+  - Found + fixed a real pre-existing bug while testing the purge: custom.js
+    calls `GLightbox(...)` with no guard, and that file is shared by all 16
+    pages even though only 5 of them load glightbox.min.js. On the other 11
+    pages (all 6 service-*.html, attire, marketplace, art, art-night-eye,
+    404) this threw and silently killed every line after it in custom.js —
+    stickyNav (solid nav on scroll), whatsappDirect (skip-the-wa.me-landing-
+    page feature), and navDropdown (hover-to-stay-open nav dropdown) never
+    ran on 11 of 16 pages. One-line guard fix (same pattern as the other
+    guards in that file), verified working on service-web.html post-fix.
   - Accessibility fixes: <main> landmark on all 16 pages; aria-label on all
     icon-only social links; h5/h6 skip-level headings promoted to h3 with
     Bootstrap .h5/.h6 sizing classes (sequential hierarchy everywhere now);
@@ -72,11 +99,11 @@ DONE
   - Agentic-readiness: added llms.txt (services + pricing + divisions +
     notes for AI agents). robots.txt already allows all crawlers by
     default (no change needed).
-  - Known follow-up, not done: Lighthouse still flags ~350KB of unused
-    Bootstrap CSS and ~3.5s of render-blocking on mobile (simulated
-    throttling). Fixing this needs PurgeCSS-style unused-rule stripping,
-    which risks breaking utility classes invoked only from JS — bigger,
-    riskier job for its own session, not bundled into this pass.
+  - Remaining, smaller: ~84KB of unused CSS still flagged (down from
+    ~350KB) and bootstrap.bundle.min.js (79KB) + glightbox.min.js (53KB)
+    are vendor bundles loaded whole even though only a fraction of each is
+    used — a further win is possible but diminishing-returns territory for
+    the risk/effort versus what's already shipped.
 
 ================================================================
 WAITING ON CLIENT

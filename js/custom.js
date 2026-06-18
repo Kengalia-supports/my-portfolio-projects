@@ -126,6 +126,7 @@
 
 	
 	var lightbox = function() {
+		if (typeof GLightbox === 'undefined') return;
 		var lightboxVideo = GLightbox({
 			selector: '.glightbox'
 		});
