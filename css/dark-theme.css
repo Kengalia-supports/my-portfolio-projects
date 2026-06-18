@@ -551,6 +551,14 @@ body.kengtec-page .site-nav {
   background-color: var(--green);
   margin-top: 12px;
 }
+/* Centered sections: the accent line must center under the heading too */
+.text-center h2.mb-0:after,
+.text-center h2.mb-2:after,
+.text-center h2.mb-3:after,
+.text-center h2.mb-4:after {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ---- ABOUT PAGE — resume h5 badge ---- */
 .resume .resume-item h5 {
@@ -674,6 +682,25 @@ small,
 .site-mobile-menu .nav-kengalia-link:hover {
   background-color: #fff !important;
   color: #2e9d63 !important;
+}
+
+/* Multi-button CTA row — wraps cleanly and stacks evenly on mobile
+   instead of two inline-block buttons with a manual margin */
+.btn-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+/* ---- NAV — safety margin at the tightest desktop breakpoint ----
+   .site-nav is position:absolute, so if the 6-item link row ever
+   wraps to a 2nd line at this width, it overlaps the hero text below
+   instead of pushing it down. Tighten link spacing here as a guard band. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .site-nav .site-navigation .site-menu > li > a {
+    padding: 10px 10px;
+    font-size: 16px;
+  }
 }
 
 /* ---- MOBILE — general responsive fixes ---- */
