@@ -65,6 +65,20 @@
 		})
 
 
+		// Close the mobile menu on any nav link click. Cross-page links already
+		// close it as a side effect of the page unloading, but same-page anchor
+		// links (e.g. "Services" while already on technologies.html) don't
+		// reload the page, so nothing else removes the open state.
+		var mobileMenuBody = document.querySelector('.site-mobile-menu-body');
+		if (mobileMenuBody) {
+			mobileMenuBody.addEventListener('click', function(e) {
+				var link = e.target.closest('a');
+				if (!link) return;
+				document.body.classList.remove('offcanvas-menu');
+				menuToggle.forEach(mtoggle => mtoggle.classList.remove('active'));
+			});
+		}
+
 
 		var specifiedElement = document.querySelector(".site-mobile-menu");
 		var mt, mtoggleTemp;

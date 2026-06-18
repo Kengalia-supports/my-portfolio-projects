@@ -145,6 +145,38 @@ DONE
     margin) and resized 1920x305 -> 1400x222 @ q85, 66KB -> 41KB.
     Mobile Lighthouse on index.html: 73 -> 85 (LCP 4.3s -> 3.6s).
 
+- DEAD WEIGHT CLEANUP (2026-06-18, ahead of the planned Phase 1/2 above):
+  - Pacifico removed from the Google Fonts import on the 9 pages that
+    loaded it — confirmed zero matches anywhere in any HTML or CSS before
+    removing. (Checked Playfair Display and Roboto too: both ARE actually
+    load-bearing — Roboto is the vendor body/.btn font-family with no
+    override anywhere in dark-theme.css, Playfair Display renders via the
+    unstyled .heading-2 class on 9 page-title headings — left both alone.)
+  - Deleted ~2MB of confirmed-orphaned files, all 0 references anywhere:
+    duplicate Bootstrap CSS source files (css/bootstrap-grid.css,
+    bootstrap-reboot.css, bootstrap-utilities.css, bootstrap.css, and a
+    second copy of all of those plus a mixins file inside css/bootstrap/),
+    tiny-slider.css, and the JS files already orphaned when their <script>
+    tags were removed earlier this session (bootstrap.bundle.min.js,
+    rellax.min.js, tiny-slider.js, counter.js — counter.js was never
+    loaded by any page in the first place). Also a duplicate pair of
+    unused screenshots living in TWO places (images/portfolio/excel-
+    select.png + excel-notselect.png, and an exact-byte-identical copy in
+    images/excel/), and 4 generic stock/placeholder images left over from
+    the original Medio template demo content (banner.jpg, excellr.jpeg,
+    img_v_6-min.jpg, OIP.jpeg) — none of these were ever referenced in
+    any HTML. Backups of everything removed are in /c/tmp on this machine.
+  - Found maybaker.webp already existed (7.3KB) but was never wired in —
+    about.html was still loading maybaker.png (21.7KB). Swapped the
+    reference and deleted the now-orphaned PNG.
+  - Left alone, NOT dead weight: images/brand/* (kengalia-by-nigerians.png
+    and the 5 logo SVGs) — these are the intentionally-kept brand asset
+    library from an earlier instruction ("don't delete, we'll use it
+    later"), zero references is expected, not a bug. Also left
+    images/godstech.png alone (added 2026-06-08, recent enough that it's
+    likely in-progress work, not abandoned — flagged for the client to
+    confirm rather than deleted).
+
 ================================================================
 NEXT ITERATION — PERFORMANCE DEEP DIVE, TARGET 100/100 (planned, not started)
 ================================================================
