@@ -137,6 +137,76 @@ DONE
     own #0a0a0a background extends seamlessly below it instead of
     stretching the art to fill the viewport. Added a preload hint since
     it's the page's LCP element.
+  - Owl banner positioning bug: tying the image's rendered height to
+    viewport WIDTH meant the "peek below the nav" amount changed per
+    screen size and vanished on some. Replaced with a fixed-height (220px)
+    absolutely-positioned band using background-size:cover, consistent
+    peek on every viewport. Re-cropped tighter (just the owl row, no dark
+    margin) and resized 1920x305 -> 1400x222 @ q85, 66KB -> 41KB.
+    Mobile Lighthouse on index.html: 73 -> 85 (LCP 4.3s -> 3.6s).
+
+================================================================
+NEXT ITERATION — PERFORMANCE DEEP DIVE, TARGET 100/100 (planned, not started)
+================================================================
+Client decision (2026-06-18): this is Kengalia's own site, not a
+third-party client project — full deep-change authority, no scope
+fence. Current state after this round: Performance 73-94 depending on
+page/device (mobile lowest), Accessibility/SEO/Best Practices 100. The
+remaining gap is structural (vendor template weight + font count), not
+quick fixes — closing it is a real rebuild of two subsystems, scope it
+as its own dedicated session(s), not squeezed into a quick pass.
+
+PHASE 1 — Font audit & cut (low risk, do first, single session)
+  - Pacifico is loaded from Google Fonts but used NOWHERE — confirmed
+    zero matches in any HTML or CSS (including vendor style.css). Pure
+    leftover from before the Kengtec logo switched to Dancing Script.
+    Delete the import — zero visual risk, immediate win.
+  - Playfair Display and Roboto are referenced only inside vendor
+    style.css (1 and 3 rules, Bootstrap's default body/heading fallback)
+    — no hit in dark-theme.css or any inline style. Need one visual pass
+    across all 16 pages to confirm nothing actually renders in them
+    (likely fully masked by dark-theme.css overrides) before dropping.
+  - Confirmed load-bearing, keep: Dancing Script (Kengalia/Kengtec
+    wordmarks), Cormorant Garamond (headings), Raleway (labels/body),
+    Quicksand (Kengtec navbar wordmark — see dark-theme.css line ~163).
+  - Self-host the surviving 4 as subset WOFF2 instead of Google Fonts
+    CDN requests — the script/display fonts only need the literal
+    characters used in wordmarks and headings, same subsetting technique
+    already used for the icomoon/feather icon fonts this session (cut
+    those from hundreds of KB to <2KB each). Removes both Google Fonts
+    CSS round-trips and their render-blocking cost entirely.
+
+PHASE 2 — Drop the Bootstrap CSS dependency (the big one, high risk)
+  - The ~84KB of "unused CSS" PurgeCSS still flags after this session's
+    purge is Bootstrap's grid (.row/.col-*) and utility classes (.d-flex,
+    .mb-*, .g-*, .gap-*, etc.) — used in too many combinations across 16
+    pages to safelist granularly, so PurgeCSS keeps the whole rule set.
+  - Fix is to replace it with a small hand-written grid/utility CSS sized
+    to what this site actually uses — same "right-size for the market"
+    principle already applied elsewhere on this project, just applied to
+    the CSS framework itself instead of hosting/architecture.
+  - This touches markup on every page (anything using .row/.col-*/.d-*/
+    .g-*/.mb-*/.gap-*/etc.) — full visual regression pass at every
+    breakpoint on all 16 pages is mandatory after, same rigor as the
+    CSS-purge verification this session (screenshot every page, retest
+    mobile menu / nav dropdown / glightbox / back-to-top).
+  - This is the step that actually closes the gap to ~100 on mobile —
+    without it, Bootstrap's base CSS alone likely keeps performance in
+    the 80s-90s even with fonts and everything else perfect.
+
+PHASE 3 — Critical CSS + full async loading (optional, do after phase 2)
+  - Once phase 2 shrinks the custom CSS to something genuinely small,
+    inline the above-the-fold critical rules in <head> and async-load
+    everything else (style.css included), eliminating render-blocking
+    CSS entirely. Low priority on its own — style.css is still the
+    dominant blocking cost right now, so this only pays off after it
+    shrinks.
+
+PHASE 4 — Re-verify against live PageSpeed Insights, not local Lighthouse
+  - All numbers in this file are from local Lighthouse against
+    localhost with simulated throttling — a proxy, not the real number.
+    Confirm final scores against live PSI once phases 1-3 are deployed,
+    since real CDN/server response times differ from localhost.
 
 ================================================================
 WAITING ON CLIENT
